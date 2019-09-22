@@ -52,7 +52,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AssemblyVersion.tt</DependentUpon>
     </Compile>
-    <Compile Include="FieldTrainingLab.cs" />
+    <Compile Include="FieldTrainingLabModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="InstallChecker.cs" />
   </ItemGroup>

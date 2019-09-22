@@ -208,5 +208,10 @@ namespace FieldTrainingLab
 
             return lastLog;
         }
+
+        public override string GetInfo()
+        {
+            return "Train Kerbals using Science Points.";
+        }
     }
 }

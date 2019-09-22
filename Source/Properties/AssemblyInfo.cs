@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Training Lab Module")]
-[assembly: AssemblyDescription("Adding Training ability to Lab")]
+[assembly: AssemblyTitle("Field Training Lab Module")]
+[assembly: AssemblyDescription("Adds Kerbal Training to Lab")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("EfourTech")]
-[assembly: AssemblyProduct("TrainingLabModule")]
-[assembly: AssemblyCopyright("none")]
+[assembly: AssemblyProduct("FieldTrainingLab")]
+[assembly: AssemblyCopyright("Copyright (c) 2016 Efour")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -31,5 +31,5 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.1.0")]
-[assembly: AssemblyFileVersion("1.0.1.0")]
+//[assembly: AssemblyVersion("1.0.1.0")]
+[assembly: AssemblyFileVersion("1.0.3.4")]

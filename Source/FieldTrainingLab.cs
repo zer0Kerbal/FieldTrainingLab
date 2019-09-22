@@ -1,6 +1,9 @@
-﻿namespace Efour
+﻿
+using UnityEngine;
+namespace FieldTrainingLab
 {
-    public class TrainingLabModule : PartModule
+
+    public class FieldTrainingLab : PartModule
     {
         ProtoCrewMember[] crewArr = new ProtoCrewMember[8];
         string[] eventArr = 
@@ -41,50 +44,54 @@
         [KSPField]
         public float TimeFactor = 426 * 6 * 60 * 60; // 1Year = 426day, 1day = 6hour, 1hour = 60minutes, 1min = 60sec
 
-        [KSPField(guiActive = false, guiName = "Science Point")]
+        [KSPField(isPersistant = true, guiActive = true, guiName = "Training Lab Status", groupName = "TrainingLab", groupDisplayName = "Training Lab", groupStartCollapsed = true)]
+        public bool TrainingStatus = false;
+
+        [KSPField(guiActive = false, guiName = "Science Point", groupName = "TrainingLab", groupDisplayName = "Field Training Lab", groupStartCollapsed = true)]
         public int SciRemain;
 
-        [KSPEvent(guiActive = false, guiName = "Training0")]
+        [KSPEvent(guiActive = false, guiName = "Training0", groupName = "TrainingLab")]
         public void TrainKerbalInside0()
         {
             TrainKerbal(0);
         }
-        [KSPEvent(guiActive = false, guiName = "Training1")]
+        [KSPEvent(guiActive = false, guiName = "Training1", groupName = "TrainingLab")]
         public void TrainKerbalInside1()
         {
             TrainKerbal(1);
         }
-        [KSPEvent(guiActive = false, guiName = "Training2")]
+        [KSPEvent(guiActive = false, guiName = "Training2", groupName = "TrainingLab")]
         public void TrainKerbalInside2()
         {
             TrainKerbal(2);
         }
-        [KSPEvent(guiActive = false, guiName = "Training3")]
+        [KSPEvent(guiActive = false, guiName = "Training3", groupName = "TrainingLab")]
         public void TrainKerbalInside3()
         {
             TrainKerbal(3);
         }
-        [KSPEvent(guiActive = false, guiName = "Training4")]
+        [KSPEvent(guiActive = false, guiName = "Training4", groupName = "TrainingLab")]
         public void TrainKerbalInside4()
         {
             TrainKerbal(4);
         }
-        [KSPEvent(guiActive = false, guiName = "Training5")]
+        [KSPEvent(guiActive = false, guiName = "Training5", groupName = "TrainingLab")]
         public void TrainKerbalInside5()
         {
             TrainKerbal(5);
         }
-        [KSPEvent(guiActive = false, guiName = "Training6")]
+        [KSPEvent(guiActive = false, guiName = "Training6", groupName = "TrainingLab")]
         public void TrainKerbalInside6()
         {
             TrainKerbal(6);
         }
-        [KSPEvent(guiActive = false, guiName = "Training7")]
+        [KSPEvent(guiActive = false, guiName = "Training7", groupName = "TrainingLab")]
         public void TrainKerbalInside7()
         {
             TrainKerbal(7);
         }
 
+        #region private functions
         private void TrainKerbal(int index)
         {
             ProtoCrewMember crew = crewArr[index];
@@ -93,14 +100,14 @@
 
             if (lastLog == 5)
             {
-                ScreenMessages.PostScreenMessage(crew.name + " already had every trainings.");
+                ScreenMessages.PostScreenMessage(crew.name + " already had every training.");
                 return;
             }
 
             float SciCost = calculateSciCost(levelUpExpTable[lastLog], crew);
             if (ResearchAndDevelopment.Instance.Science < SciCost)
             {
-                ScreenMessages.PostScreenMessage("Insufficient Science Point.\n" + 
+                ScreenMessages.PostScreenMessage("Insufficient Science Points.\n" + 
                     "Needed : " + SciCost + ", Remain : " + ResearchAndDevelopment.Instance.Science);
                 return;
             }
@@ -110,7 +117,9 @@
             ScreenMessages.PostScreenMessage(levelNumber[lastLog] + " Training Complete : " + crew.name);
 
         }
+#endregion
 
+#region public functions
         public override void OnUpdate()
         {
             if (HighLogic.CurrentGame.Mode != Game.Modes.CAREER) return;
@@ -138,6 +147,8 @@
             for(; index < eventArr.Length; index++) Events[eventArr[index]].guiActive = false;
         }
 
+
+#endregion
         private int calculateSciCost(float baseValue, ProtoCrewMember crew)
         {
             double calculated = baseValue * TrainFactor * (1 - (getKerbalTrainingExp(crew) / (TimeFactor * baseValue / 64)));

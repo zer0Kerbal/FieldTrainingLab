@@ -10,7 +10,7 @@ This mod provides Training system to your kerbalnauts.
 If you want to train your kerbal immediately, you can use these mods.
 (Dependency : ![Module Manager](http://forum.kerbalspaceprogram.com/index.php?/topic/50533-12-*)
 
-[1.6.x] Training Laboratory
+[1.7.x] Training Laboratory
 ![Spacedock](http://spacedock.info/mod/971)
 
 ![FieldTrainingLab](https://i.imgur.com/VGwKrJn.png)

@@ -6,7 +6,7 @@ updated: 23 Sep 19 -->
 <!-- Download on SpaceDock or Github or Curseforge. Also available on CKAN. -->
 
 # Field Training Lab (FTL)
-formerly TrainingLaboratory
+### formerly TrainingLaboratory
 ![Mod Version](https://img.shields.io/github/v/release/zer0Kerbal/FieldTrainingLab?include_prereleases) 
 ![KSP 1.7.x](https://img.shields.io/badge/KSP%20version-1.7.x-66ccff.svg?style=flat-square) 
 ![CKAN listed](https://img.shields.io/badge/CKAN-Indexed-brightgreen.svg) 

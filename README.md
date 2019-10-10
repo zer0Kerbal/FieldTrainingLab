@@ -10,7 +10,7 @@ updated: 10 Oct 19 -->
 ![Mod Version](https://img.shields.io/github/v/release/zer0Kerbal/FieldTrainingLab?include_prereleases) 
 ![KSP 1.7.x](https://img.shields.io/badge/KSP%20version-1.7.x-66ccff.svg?style=flat-square) 
 ![CKAN listed](https://img.shields.io/badge/CKAN-Indexed-brightgreen.svg) 
-![License MIT]https://img.shields.io/badge/license-MIT-red)
+![License MIT](https://img.shields.io/badge/license-MIT-red)
 
  This mod adds a training center into all science laboratories. Paying science points gets Kerbal experience(stars).
  

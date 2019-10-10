@@ -1,5 +1,7 @@
 MIT License
+
 ![License MIT](https://img.shields.io/badge/license-MIT-red)
+
 Copyright (c) 2016 Efour
 Copyright (c) 2019 zer0Kerbal
 

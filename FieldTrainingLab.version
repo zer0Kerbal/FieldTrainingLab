@@ -2,7 +2,7 @@
 	"NAME":"FieldTrainingLab",
 	"URL":"https://raw.githubusercontent.com/zer0Kerbal/FieldTrainingLab/FieldTrainingLab.version",
 	"DOWNLOAD":"https://github.com/zer0Kerbal/FieldTrainingLab/releases/latest",
-	"CHANGE_LOG_URL":"https://raw.githubusercontent.com/zer0Kerbal/FieldTrainingLab/KerbalChangelog.cfg",
+	"CHANGE_LOG_URL":"https://raw.githubusercontent.com/zer0Kerbal/FieldTrainingLab/Changelog.cfg",
 	"GITHUB":
 	{
 		"USERNAME":"zer0Kerbal",

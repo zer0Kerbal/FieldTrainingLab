@@ -113,7 +113,7 @@ License: ![License MIT][shield:license] ![][LOGO:mit]
 ###### v1.0.3. original: 11 Aug 2018 0K updated: 21 Mar 2020 zed'K
 
 <!-- graphical links to downloads -->
-[MOD:license]:      https://github.com/zer0Kerbal/SimpleLogistics/blob/master/LICENSE
+[MOD:license]:      https://github.com/zer0Kerbal/FieldTrainingLab/blob/master/LICENSE
 [MOD:contributing]: https://github.com/zer0Kerbal/FieldTrainingLab/blob/master/.github/CONTRIBUTING.md
 [MOD:issues]:       https://github.com/zer0Kerbal/FieldTrainingLab/issues
 [MOD:wiki]:         https://github.com/zer0Kerbal/FieldTrainingLab/

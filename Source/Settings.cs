@@ -1,8 +1,9 @@
 ﻿using System;
-using UnityEngine;
-using System.Collections.Generic;
 using System.Collections;
+using System.Collections.Generic;
 using System.Reflection;
+using UnityEngine;
+using KSP.Localization;
 
 // This will add a tab to the Stock Settings in the Difficulty settings called "On Demand Fuel Cells"
 // To use, reference the setting using the following:
@@ -19,10 +20,10 @@ namespace FieldTrainingLab
 
     public class ODFC_Options : GameParameters.CustomParameterNode
     {
-        public override string Title { get { return "Field Training Lab v1.0.4.0 Settings"; } }
+        public override string Title { get { return "[WIP] Field Training Lab Settings"; } }
         public override GameParameters.GameMode GameMode { get { return GameParameters.GameMode.ANY; } }
-        public override string Section { get { return "Field Training"; } }
-        public override string DisplaySection { get { return "Field Training"; } }
+        public override string Section { get { return "[WIP] Field Training"; } }
+        public override string DisplaySection { get { return "[WIP] Field Training"; } }
         public override int SectionOrder { get { return 1; } }
 
 
@@ -33,16 +34,17 @@ namespace FieldTrainingLab
         public bool enableFTL = true;
 
         [GameParameters.CustomStringParameterUI("Payment Label",
+            toolTip = "Science/Reputation/Funds",
             autoPersistance = true,
             lines = 2,
             title = "How would you like to pay for your kerbal training?",
-            toolTip = "Science/Reputation/Funds")]
+            unlockedDuringMission = true)]
         public string UIstring = "";
 
         /// <summary>require science points
         /// to gain experience</summary>        
         [GameParameters.CustomParameterUI("Require Science Points to advance",
-        toolTip = "If enabled, requires expending Science points to gain experience.",
+            toolTip = "If enabled, requires expending Science points to gain experience.",
             newGameOnly = false,
             unlockedDuringMission = true)]
         public bool requireSciencePoints = true;
@@ -56,7 +58,7 @@ namespace FieldTrainingLab
             minValue = 0.0f,
             maxValue = 100.0f,
             stepCount = 1)]
-       public double costScience = 10.0f;
+       public double costScience = 20.0f;
 
         /// <summary>require Reputation
         /// to gain experience</summary>
@@ -95,6 +97,12 @@ namespace FieldTrainingLab
              stepCount = 1)]
         public double costFunds = 1000f;
 
+        [GameParameters.CustomParameterUI("KSPMail",
+            toolTip = "Recieve a colorful Joyntmail announcing graduation to a new rank?.",
+            newGameOnly = false,
+            unlockedDuringMission = true)]
+        public bool KSPMail = true;
+
         [GameParameters.CustomParameterUI("PAW Color",
             toolTip = "allow color coding in Field Training Lab PAW (part action window) / RMB (right menu button).",
             newGameOnly = false,
@@ -117,7 +125,7 @@ namespace FieldTrainingLab
                     requireSciencePoints = true;
                     requireReputationPoints = false;
                     requireFunds = false;
-                    costScience = 10;
+                    costScience = 15;
                     costFunds = 100;
                     costReputation = .1;
                    // autoSwitch = true;
@@ -128,7 +136,7 @@ namespace FieldTrainingLab
                     requireSciencePoints = true;
                     requireFunds = true;
                     requireReputationPoints = false;
-                    costScience = 10;
+                    costScience = 20;
                     costFunds = 1000;
                     costReputation = 1;
                     // autoSwitch = true;
@@ -139,7 +147,7 @@ namespace FieldTrainingLab
                     requireSciencePoints = true;
                     requireFunds = true;
                     requireReputationPoints = true;
-                    costScience = 10;
+                    costScience = 25;
                     costFunds = 1000;
                     costReputation = 1.5;
                     //autoSwitch = true;
@@ -150,7 +158,7 @@ namespace FieldTrainingLab
                     requireSciencePoints = true;
                     requireFunds = true;
                     requireReputationPoints = true;
-                    costScience = 10;
+                    costScience = 30;
                     costFunds = 1000;
                     costReputation = 2.0;
                     //autoSwitch = false;

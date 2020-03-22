@@ -22,8 +22,8 @@ Pay 20 science and your kerbal recieved 1 experience. Once your kerbal has gaine
 ### Costs: [^2]
 |Level| Stars   | Additional XP | Total XP |  |
 |-----|---------|---------------|----------|-----------------|
-|0    | ☆☆☆☆☆ |    	0        |     0    |                 
-|1      | ★☆☆☆☆ |    	2          |	    2        |  +40 science
+|0    | ☆☆☆☆☆ |    	0        |     0    |                 |
+|1      | ★☆☆☆☆ |    	2          |	    2        |  +40 science |
 |2      | ★★☆☆☆ |    	6          | 8    |  +120 science
 |3      | ★★★☆☆ |    	8          |	    16      |  +160 science  
 |4      | ★★★★☆ |    	16        |     32      |  +320 science  

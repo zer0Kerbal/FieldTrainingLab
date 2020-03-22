@@ -20,14 +20,15 @@ Field Training Lab provides a training method that consumes science points to ge
  
 Pay 20 science and your kerbal recieved 1 experience. Once your kerbal has gained enough experience, they will level up (max of level 5). ***Must buy one entire level at a time.***
 ### Costs: [^2]
-|Level| Stars   | Additional XP | Total XP |  |
-|-----|---------|---------------|----------|-----------------|
-|0    | ☆☆☆☆☆ |    	0        |     0    |                 |
-|1      | ★☆☆☆☆ |    	2          |	    2        |  +40 science |
-|2      | ★★☆☆☆ |    	6          | 8    |  +120 science
-|3      | ★★★☆☆ |    	8          |	    16      |  +160 science  
-|4      | ★★★★☆ |    	16        |     32      |  +320 science  
-|5      | ★★★★★ |    	32        |     64      |  +640 science  
+| Level | Stars | Additional XP | Total XP | Column4      |
+|-------|-------|---------------|----------|--------------|
+| 0     | ☆☆☆☆☆ | 0             | 0        |              |
+| 1     | ★☆☆☆☆ | 2             | 2        | +40 science  |
+| 2     | ★★☆☆☆ | 6             | 8        | +120 science |
+| 3     | ★★★☆☆ | 8             | 16       | +160 science |
+| 4     | ★★★★☆ | 16            | 32       | +320 science |
+| 5     | ★★★★★ | 32            | 64       | +640 science |
+
   
 #### Training costs will be reduced:  
 - by 50% when your Field Training Lab is in orbit  

@@ -19,31 +19,87 @@ namespace FieldTrainingLab
 
     public class ODFC_Options : GameParameters.CustomParameterNode
     {
-        public override string Title { get { return "Default Settings"; } }
+        public override string Title { get { return "Field Training Lab v1.0.4.0 Settings"; } }
         public override GameParameters.GameMode GameMode { get { return GameParameters.GameMode.ANY; } }
-        public override string Section { get { return "ODFCr"; } }
-        public override string DisplaySection { get { return "On Demand Fuel Cells"; } }
+        public override string Section { get { return "Field Training"; } }
+        public override string DisplaySection { get { return "Field Training"; } }
         public override int SectionOrder { get { return 1; } }
 
 
-        [GameParameters.CustomParameterUI("Require EC to run",
-            toolTip = "if set to yes, the fuel cells will 'stall' if the vessels total electric charge reaches zero and will not function until vessel electric charge is above zero.",
-            newGameOnly = false,
-            unlockedDuringMission = true
-            )]
-        public bool needsECtoStart = false;
-
-        [GameParameters.CustomParameterUI("Auto Fuel Mode Switch",
-            toolTip = "if current fuel mode becomes fuel deprived, will 'hunt' or 'search' for a fuel mode that has fuel.",
+        [GameParameters.CustomParameterUI("Enable Field Training Lab?",
+            toolTip = "Field Training Labs are enabled if set to yes.",
             newGameOnly = false,
             unlockedDuringMission = true)]
-        public bool autoSwitch = true;
+        public bool enableFTL = true;
+
+        [GameParameters.CustomStringParameterUI("Payment Label",
+            autoPersistance = true,
+            lines = 2,
+            title = "How would you like to pay for your kerbal training?",
+            toolTip = "Science/Reputation/Funds")]
+        public string UIstring = "";
+
+        /// <summary>require science points
+        /// to gain experience</summary>        
+        [GameParameters.CustomParameterUI("Require Science Points to advance",
+        toolTip = "If enabled, requires expending Science points to gain experience.",
+            newGameOnly = false,
+            unlockedDuringMission = true)]
+        public bool requireSciencePoints = true;
+
+        /// <summary>number of science points per
+        /// experience point</summary> 
+       [GameParameters.CustomFloatParameterUI("Science : Experience",
+        toolTip = "Ratio of Science Points per Experience Point.",
+            newGameOnly = false,
+            unlockedDuringMission = true,
+            minValue = 0.0f,
+            maxValue = 100.0f,
+            stepCount = 1)]
+       public double costScience = 10.0f;
+
+        /// <summary>require Reputation
+        /// to gain experience</summary>
+        [GameParameters.CustomParameterUI("Require Reputation to advance",
+            toolTip = "If enabled, requires expending Reputation to gain experience.",
+            newGameOnly = false,
+            unlockedDuringMission = true)]
+        public bool requireReputationPoints = false;
+
+        /// <summary>number of Reputation per
+        /// experience point</summary>
+        [GameParameters.CustomFloatParameterUI("Reputation : Experience",
+         toolTip = "Ratio of Reputation per Experience Point.",
+             newGameOnly = false,
+             unlockedDuringMission = true,
+             minValue = 0.0f,
+             maxValue = 50.0f)]
+        public double costReputation = 0.1f;
+
+        /// <summary>require Funds
+        /// to gain experience</summary>       
+        [GameParameters.CustomParameterUI("Require Funds to advance",
+        toolTip = "If enabled, requires expending Funds to gain experience.",
+            newGameOnly = false,
+            unlockedDuringMission = true)]
+        public bool requireFunds = false;
+
+        /// <summary>amount of Funds per
+        /// experience point</summary>  
+        [GameParameters.CustomFloatParameterUI("Funds : Experience",
+         toolTip = "Ratio of Funds per Experience Point.",
+             newGameOnly = false,
+             unlockedDuringMission = true,
+             minValue = 0.0f,
+             maxValue = 5000.0f,
+             stepCount = 1)]
+        public double costFunds = 1000f;
 
         [GameParameters.CustomParameterUI("PAW Color",
-            toolTip = "allow color coding in ODC PAW (part action window) / part RMB (right menu button).",
+            toolTip = "allow color coding in Field Training Lab PAW (part action window) / RMB (right menu button).",
             newGameOnly = false,
             unlockedDuringMission = true)]
-        public bool coloredPAW = true;
+        public bool coloredPAWFTL = true;
 
         // If you want to have some of the game settings default to enabled,  change 
         // the "if false" to "if true" and set the values as you like
@@ -57,23 +113,47 @@ namespace FieldTrainingLab
             switch (preset)
             {
                 case GameParameters.Preset.Easy:
-                    needsECtoStart = false;
-                    autoSwitch = true;
+                    enableFTL = true;
+                    requireSciencePoints = true;
+                    requireReputationPoints = false;
+                    requireFunds = false;
+                    costScience = 10;
+                    costFunds = 100;
+                    costReputation = .1;
+                   // autoSwitch = true;
                     break;
 
                 case GameParameters.Preset.Normal:
-                    needsECtoStart = false;
-                    autoSwitch = true;
+                    enableFTL = true;
+                    requireSciencePoints = true;
+                    requireFunds = true;
+                    requireReputationPoints = false;
+                    costScience = 10;
+                    costFunds = 1000;
+                    costReputation = 1;
+                    // autoSwitch = true;
                     break;
 
                 case GameParameters.Preset.Moderate:
-                    needsECtoStart = true;
-                    autoSwitch = true;
+                    enableFTL = true;
+                    requireSciencePoints = true;
+                    requireFunds = true;
+                    requireReputationPoints = true;
+                    costScience = 10;
+                    costFunds = 1000;
+                    costReputation = 1.5;
+                    //autoSwitch = true;
                     break;
 
                 case GameParameters.Preset.Hard:
-                    needsECtoStart = true;
-                    autoSwitch = false;
+                    enableFTL = false;
+                    requireSciencePoints = true;
+                    requireFunds = true;
+                    requireReputationPoints = true;
+                    costScience = 10;
+                    costFunds = 1000;
+                    costReputation = 2.0;
+                    //autoSwitch = false;
                     break;
             }
         }

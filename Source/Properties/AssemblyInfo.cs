@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Field Training Lab Module")]
-[assembly: AssemblyDescription("Adds Kerbal Training to Lab")]
+[assembly: AssemblyDescription("Adds Kerbal Training to Labs")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("EfourTech")]
 [assembly: AssemblyProduct("FieldTrainingLab")]
@@ -32,4 +32,4 @@ using System.Runtime.InteropServices;
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
 //[assembly: AssemblyVersion("1.0.1.0")]
-[assembly: AssemblyFileVersion("1.0.3.4")]
+//[assembly: AssemblyFileVersion("1.0.4.0")]

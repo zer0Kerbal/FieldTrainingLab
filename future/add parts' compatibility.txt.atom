@@ -1,0 +1,128 @@
+add parts' compatibility
+
+TokamakIndustries
+@PART[centrifugeSmall]HAS[!MODULE[FieldTrainingFacilityModule]]NEEDS[TokamakIndustries,FieldTrainingFacility,!TrainingLab]AFTER[FieldTrainingFacility]
+{
+ MODULE
+ {
+   name = FieldTrainingFacilityModule
+    TimeFactor = 9201600
+   ECFactor = 1  max 4 crew
+    SpaceFactor = 4
+    LandedFactor = 6
+ }
+}
+
+@PART[centrifugeSmall]HAS[!MODULE[TrainingLabModule]]NEEDS[TokamakIndustries,TrainingLab,!FieldTrainingFacility]AFTER[TrainingLab]
+{
+ MODULE
+ {
+   name = TrainingLabModule
+    TimeFactor = 9201600
+    TrainFactor = 20
+    inSpace = 0.5
+    Landed = 0.25
+ }
+}
+
+StationPartsExpansionRedux
+@PART[sspx-expandable-centrifuge-375-2]HAS[!MODULE[FieldTrainingFacilityModule]]NEEDS[StationPartsExpansionRedux,FieldTrainingFacility,!TrainingLab]AFTER[FieldTrainingFacility]
+{
+ MODULE
+ {
+   name = FieldTrainingFacilityModule
+    TimeFactor = 9201600
+   ECFactor = 0.4  max 10 crew
+    SpaceFactor = 4
+    LandedFactor = 6
+ }
+}
+
+@PART[sspx-expandable-centrifuge-375-2]HAS[!MODULE[TrainingLabModule]]NEEDS[StationPartsExpansionRedux,TrainingLab,!FieldTrainingFacility]AFTER[TrainingLab]
+{
+ MODULE
+ {
+   name = TrainingLabModule
+    TimeFactor = 9201600
+    TrainFactor = 20
+    inSpace = 0.5
+    Landed = 0.25
+ }
+}
+
+Kerbalism
+@PART[kerbalism-gravityring]HAS[!MODULE[FieldTrainingFacilityModule]]NEEDS[Kerbalism,ProfileDefault,FieldTrainingFacility,!TrainingLab]AFTER[FieldTrainingFacility]
+{
+ MODULE
+ {
+   name = FieldTrainingFacilityModule
+    TimeFactor = 9201600
+   ECFactor = 0.66666667  max 6 crew
+    SpaceFactor = 4
+    LandedFactor = 6
+ }
+}
+
+@PART[kerbalism-gravityring]HAS[!MODULE[TrainingLabModule]]NEEDS[Kerbalism,ProfileDefault,TrainingLab,!FieldTrainingFacility]AFTER[TrainingLab]
+{
+ MODULE
+ {
+   name = TrainingLabModule
+    TimeFactor = 9201600
+    TrainFactor = 20
+    inSpace = 0.5
+    Landed = 0.25
+ }
+}
+
+Bluedog DB MOL Orbital Habitation Segment
+@PART[bluedog_MOL_Hab]HAS[!MODULE[FieldTrainingFacilityModule]]NEEDS[Bluedog_DB,FieldTrainingFacility,!TrainingLab]AFTER[FieldTrainingFacility]
+{
+ MODULE
+ {
+   name = FieldTrainingFacilityModule
+    TimeFactor = 9201600
+   ECFactor = 1.33333333  max 3 crew
+    SpaceFactor = 4
+    LandedFactor = 6
+ }
+}
+
+@PART[bluedog_MOL_Hab]HAS[!MODULE[TrainingLabModule]]NEEDS[Bluedog_DB,TrainingLab,!FieldTrainingFacility]AFTER[TrainingLab]
+{
+ MODULE
+ {
+   name = TrainingLabModule
+    TimeFactor = 9201600
+    TrainFactor = 20
+    inSpace = 0.5
+    Landed = 0.25
+ }
+}
+
+Bluedog DB Skylab
+@PART[bluedog_Skylab_OWS]HAS[!MODULE[FieldTrainingFacilityModule]]NEEDS[Bluedog_DB,FieldTrainingFacility,!TrainingLab]AFTER[FieldTrainingFacility]
+{
+ MODULE
+ {
+   name = FieldTrainingFacilityModule
+    TimeFactor = 9201600
+   ECFactor = 0.66666667  max 6 crew
+    SpaceFactor = 4
+    LandedFactor = 6
+ }
+}
+
+@PART[bluedog_Skylab_OWS]HAS[!MODULE[TrainingLabModule]]NEEDS[Bluedog_DB,TrainingLab,!FieldTrainingFacility]AFTER[TrainingLab]
+{
+ MODULE
+ {
+   name = TrainingLabModule
+    TimeFactor = 9201600
+    TrainFactor = 20
+    inSpace = 0.5
+    Landed = 0.25
+ }
+}
+
+// gordon dry

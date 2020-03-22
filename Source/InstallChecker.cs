@@ -1,4 +1,9 @@
-﻿/**
+/*
+  * InstallChecker.cs
+  * version 2.0.0.0
+*/
+
+/**
  * Based on the InstallChecker from the Kethane mod for Kerbal Space Program.
  * https://github.com/Majiir/Kethane/blob/b93b1171ec42b4be6c44b257ad31c7efd7ea1702/Plugin/InstallChecker.cs
  * 
@@ -15,14 +20,34 @@ using System.Reflection;
 using UnityEngine;
 
 namespace FieldTrainingLab
-
 {
+    [KSPAddon(KSPAddon.Startup.Instantly, true)]
+    internal class Startup : MonoBehaviour
+    {
+        private void Start()
+        {
+            string v = "n/a";
+            AssemblyTitleAttribute attributes = (AssemblyTitleAttribute)Attribute.GetCustomAttribute(Assembly.GetExecutingAssembly(), typeof(AssemblyTitleAttribute), false);
+            string title = attributes?.Title;
+            if (title == null)
+            {
+                title = "TitleNotAvailable";
+            }
+            v = Assembly.GetExecutingAssembly().FullName;
+            if (v == null)
+            {
+                v = "VersionNotAvailable";
+            }
+            Debug.Log("[" + title + "] Version " + v);
+        }
+    }
+
     [KSPAddon(KSPAddon.Startup.MainMenu, true)]
     internal class InstallChecker : MonoBehaviour
     {
-        private const string MODNAME = "FieldTrainingLab";
-        private const string FOLDERNAME = "FieldTrainingLab";
-        private const string EXPECTEDPATH = FOLDERNAME + "/Plugins";
+        internal const string MODNAME = "FieldTrainingLab";
+        internal const string FOLDERNAME = "FieldTrainingLab";
+        internal const string EXPECTEDPATH = FOLDERNAME + "/Plugins";
 
         protected void Start()
         {
@@ -76,5 +101,3 @@ namespace FieldTrainingLab
         }
     }
 }
-
-

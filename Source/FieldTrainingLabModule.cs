@@ -3,6 +3,8 @@ using UnityEngine;
 namespace FieldTrainingLab
 {
 
+    /// <summary></summary>
+    /// <seealso cref="PartModule" />
     public class FieldTrainingLab : PartModule
     {
         ProtoCrewMember[] crewArr = new ProtoCrewMember[8];

@@ -89,3 +89,4 @@ obj/
 *.log
 TestResult.xml
 
+*.ide-shm

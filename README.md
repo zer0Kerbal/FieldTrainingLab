@@ -6,7 +6,7 @@ updated: 2020 03 21 -->
 ## Download on [SpaceDock][MOD:rel-spacedock] or [Github][MOD:rel-github] or [Curseforge][MOD:rel-curseforge]. Also available on [CKAN][MOD:rel-ckan].  
 
 # Field Training Lab (FTL)
-### Adopted by [@zer0Kerbal][LINK:zer0kerbal] with continued support from the community.  
+### Adopted by [@zer0Kerbal][LINK:zer0kerbal]  [email][LINK:email:zer0Kerbal] with continued support from the community.  
 #### formerly TrainingLaboratory by [@Efour][LINK:efour]  
 ![Mod Version][shield:mod:latest] 
 ![KSP version][shield:ksp] ![KSP-AVC][shield:kspavc] ![License MIT][shield:license] ![][LOGO:mit]   
@@ -194,14 +194,16 @@ License: ![License MIT][shield:license] ![][LOGO:mit]
 
 [thread:mm]:  http://forum.kerbalspaceprogram.com/index.php?/topic/50533-* "ModuleManager"  
 [thread:mc]:  https://forum.kerbalspaceprogram.com/index.php?/topic/178484-* " "
-[thread:kcl]:  https://forum.kerbalspaceprogram.com/index.php?/topic/179207-* "Kerbal Change Log"  
+[thread:kcl]:  https://forum.kerbalspaceprogram.com/index.php?/topic/179207-* "Kerbal Changelog"  
 
 [thread:tweakscale]:            https://forum.kerbalspaceprogram.com/index.php?/topic/179030-*
 [thread:crp]: http://forum.kerbalspaceprogram.com/index.php?/topic/83007-*
 [thread:kpbs]: http://forum.kerbalspaceprogram.com/index.php?/topic/133606-1 "Kerbal Planetary Base Systems"  
 [thread:getsupport]: https://forum.kerbalspaceprogram.com/index.php?/topic/83212-*
 [thread:wiki:xp]: https://wiki.kerbalspaceprogram.com/wiki/Experience "KSP WIKI: Experience"
-[LINK:zer0Kerbal]: https://forum.kerbalspaceprogram.com/index.php?/profile/190933-zer0kerbal/  
+[LINK:zer0Kerbal]: https://forum.kerbalspaceprogram.com/index.php?/profile/190933-zer0kerbal/  "zer0Kerbal"
+[LINK:email:zer0Kerbal]: mailto:zer0Kerbal@hotmail.com "email zer0Kerbal"
+
 [LINK:efour]:      https://forum.kerbalspaceprogram.com/index.php?/profile/152350-efour/ "Efour"  
 [LINK:orig]:       https://forum.kerbalspaceprogram.com/index.php?/profile/152350-efour/ "Efour"  
 

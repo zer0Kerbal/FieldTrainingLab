@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Field Training Lab Module")]
-[assembly: AssemblyDescription("Adds Kerbal Training to Labs")]
+[assembly: AssemblyTitle("Field Training Lab (FTL)")]
+[assembly: AssemblyDescription("Train Kerbals using Science Points, for Kerbal Space Program")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("EfourTech")]
-[assembly: AssemblyProduct("FieldTrainingLab")]
+[assembly: AssemblyCompany("Kerbalnaut Training Industries, Inc.")]
+[assembly: AssemblyProduct("Field Training Lab")]
 [assembly: AssemblyCopyright("Copyright (c) 2016 Efour")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -18,6 +18,7 @@ using System.Runtime.InteropServices;
 // to COM components.  If you need to access a type in this assembly from 
 // COM, set the ComVisible attribute to true on that type.
 [assembly: ComVisible(false)]
+[assembly: AssemblyInformationalVersionAttribute("Train Kerbals using Science Points, for Kerbal Space Program")]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
 

@@ -1,5 +1,6 @@
-﻿
-using UnityEngine;
+﻿using UnityEngine;
+using KSP.Localization;
+
 namespace FieldTrainingLab
 {
 
@@ -46,7 +47,7 @@ namespace FieldTrainingLab
         [KSPField]
         public float TimeFactor = 426 * 6 * 60 * 60; // 1Year = 426day, 1day = 6hour, 1hour = 60minutes, 1min = 60sec
 
-        [KSPField(isPersistant = true, guiActive = true, guiName = "Training Lab Status", groupName = "TrainingLab", groupDisplayName = "Training Lab", groupStartCollapsed = true)]
+        [KSPField(isPersistant = true, guiActive = true, guiName = "Training Lab Status", groupName = "TrainingLab", groupDisplayName = "Training Lab v" + Version.Text, groupStartCollapsed = true)]
         public bool TrainingStatus = false;
 
         [KSPField(guiActive = false, guiName = "Science Point", groupName = "TrainingLab", groupDisplayName = "Field Training Lab", groupStartCollapsed = true)]
@@ -211,9 +212,46 @@ namespace FieldTrainingLab
             return lastLog;
         }
 
+        /// <summary>Converts consumption rate into /s /m /hour and returns a formate string.</summary>
+        /// <param name="Rate">The rate.</param>
+        /// <returns>RateString="Rate"</returns>
+        private static string RateString(double rate)
+        {
+            //  double rate = double.Parse(value.value);
+            string sfx = "/s";
+            if (rate <= 0.004444444f)
+            {
+                rate *= 3600;
+                sfx = "/h";
+            }
+            else if (rate < 0.2666667f)
+            {
+                rate *= 60;
+                sfx = "/m";
+            }
+            // limit decimal places to 10 and add sfx
+            //return String.Format(FuelRateFormat, Rate, sfx);
+            return rate.ToString("###.#####") + " EC" + sfx;
+        }
+        /// <summary>Module information shown in editors</summary>
+        private string info = string.Empty;
+
         public override string GetInfo()
         {
-            return "Train Kerbals using Science Points.";
+            //? this is what is show in the editor
+            //? As annoying as it is, pre-parsing the config MUST be done here, because this is called during part loading.
+            //? The config is only fully parsed after everything is fully loaded (which is why it's in OnStart())
+            if (info == string.Empty)
+            {
+                info += Localizer.Format("#FieldTrainingLab_manu"); // #FieldTrainingLab_manu = Kerbalnaut Training Industries, Inc.
+                info += "\n v" + Version.Text; // FTL Version Number text
+                info += "\n<color=#b4d455FF>" + Localizer.Format("#FieldTrainingLab_desc"); // #FieldTrainingLab_desc = Train Kerbals using Science Points
+            }
+            // #autoLOC_252004 = ElectricCharge
+            // #FieldTrainingFacility_titl = FieldTrainingFacility
+            // #FieldTrainingLab_manu = Kerbalnaut Training Industries, Inc.
+            // #FieldTrainingLab_desc = Train Kerbals using time and Electric Charge
+            return info;
         }
     }
 }

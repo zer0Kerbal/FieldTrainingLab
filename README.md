@@ -3,8 +3,6 @@ Field Training Lab (FTL)
 created: 23 Sep 19
 updated: 2020 03 21 -->
 
-## Download on [SpaceDock][MOD:rel-spacedock] or [Github][MOD:rel-github] or [Curseforge][MOD:rel-curseforge]. Also available on [CKAN][MOD:rel-ckan].  
-
 # Field Training Lab (FTL)
 ### Adopted by [@zer0Kerbal][LINK:zer0kerbal]  [email][LINK:email:zer0Kerbal] with continued support from the community.  
 #### formerly TrainingLaboratory by [@Efour][LINK:efour]  

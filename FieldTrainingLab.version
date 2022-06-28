@@ -2,7 +2,7 @@
     "NAME"           : "Field Training Lab (FTL)",
     "URL"            : "https://raw.githubusercontent.com/zer0Kerbal/FieldTrainingLab/master/FieldTrainingLab.version",
     "DOWNLOAD"       : "https://github.com/zer0Kerbal/FieldTrainingLab/releases/latest",
-    "CHANGE_LOG_URL" : "https://raw.githubusercontent.com/zer0Kerbal/FieldTrainingLab/master/Changelog.cfg",
+    "CHANGE_LOG_URL" : "https://raw.githubusercontent.com/zer0Kerbal/FieldTrainingLab/master/changelog.md",
     "GITHUB" :
     {
         "USERNAME"          : "zer0Kerbal",

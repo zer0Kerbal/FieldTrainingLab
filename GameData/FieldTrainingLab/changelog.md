@@ -10,7 +10,7 @@
 | spacedock  | (https://spacedock.info/mod/971)                                  |
 | ckan       | FieldTrainingLab                                                  |
 
-## Version 1.2.1.0 - `<EDITION>` edition
+## Version 1.2.1.0 - `<Clean Blackboards>` edition
 
 * 28 Jun 2022
 * For Kerbal Space Program [1.12.x]
@@ -21,6 +21,20 @@
   * was Expat/MIT
 * closes #32 - Update License to GPLv3
 
+### docs/
+
+* Add
+  * [Attribution.md] v1.0.6.0
+  * [ManualInstallation.md] v1.1.7.0
+  * [404-petunia.md]
+  * [LegalMumboJumbo.md] v1.0.5.0
+  * [Localizations.md] v1.1.3.1
+  * [Notices.md] v1.0.0.0
+  * [Why-not.md]
+  * [_config.yml]
+* closes #2 - Needs a wiki
+* closes #35 - add docs/
+
 ### Convert Changelog
 
 * Convert from .cfg to md
@@ -30,6 +44,7 @@
 ### Code
 
 * Recompile for KSP 1.12.3
+* Using .NET 4.6.1
   * remove
     * [InstallChecker.cs]
     * [AssemblyVersion.tt]
@@ -45,20 +60,31 @@
   * [Kerbalism.cfg] v1.0.1.0
     * fixes #34 - [Bug 🐞]: Kerbalism.cfg
 
+### Add
+
+* Agent
+* Flag
+  * 512x320
+  * 64x40 truecolor_scaled
+
 ### Localization
 
 * Add
   * [readme.md] v2.1.2.0
   * [quickstart.md] v1.0.1.1
-* updates #31 - Code Localization
+* updates #14 - English <us-en.cfg>
 * updates #13 - Localization - Master
-* closes #22 - Simplified Chinese (简体中文) <zh-cn.cfg>
+* updates #31 - Code Localization
+* updates #22 - Simplified Chinese (简体中文) <zh-cn.cfg>
 
 ### Status
 
 * Issues
-  * 
-* Closed Duplicate Issues
+  * closes #9 - Field Training Lab (FTL) 1.2.1.0-release `<EDITION>`
+  * closes #10 - 1.2.1.0 Verify Legal Mumbo Jumbo
+  * closes #11 - 1.2.1.0 Update Documentation
+  * closes #12 - 1.2.1.0 Update Social Media
+* Closes Duplicate Issues
   * #1 - Localization
   * #4 - :sparkles: **Localization** :sparkles:
   * #5 - Localization - en-us.cfg (English)

@@ -1,0 +1,36 @@
+{
+    "NAME"           : "Field Training Lab (FTL)",
+    "URL"            : "https://raw.githubusercontent.com/zer0Kerbal/FieldTrainingLab/master/FieldTrainingLab.version",
+    "DOWNLOAD"       : "https://github.com/zer0Kerbal/FieldTrainingLab/releases/latest",
+    "CHANGE_LOG_URL" : "https://raw.githubusercontent.com/zer0Kerbal/FieldTrainingLab/master/changelog.md",
+    "GITHUB" :
+    {
+        "USERNAME"          : "zer0Kerbal",
+        "REPOSITORY"        : "FieldTrainingLab",
+        "ALLOW_PRE_RELEASE" : false
+    },
+    "VERSION" :
+    {
+        "MAJOR" : 1,
+        "MINOR" : 2,
+        "PATCH" : 1,
+        "BUILD" : 0
+    },
+    "KSP_VERSION" :
+    {
+        "MAJOR" : 1,
+        "MINOR" : 12,
+        "PATCH" : 3
+    },
+    "KSP_VERSION_MIN" :
+    {
+        "MAJOR" : 1,
+        "MINOR" : 8,
+        "PATCH" : 1
+    },
+    "INSTALL_LOC" :
+    {
+        "NAME" :          "FieldTrainingLab",
+        "DIRECTORY" :     "FieldTrainingLab"
+    }
+}

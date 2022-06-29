@@ -59,7 +59,7 @@ Pay 20 science and your kerbal recieved 1 experience. Once your kerbal has gaine
 
 * If leveling up *immediately* is not realistic?
 * Do you think training needs time to complete?
-* then [Field Training Facility][thread:FTF] will be the answer for you.
+* then [Field Training Facility][FTF] will be the answer for you.
 * The Field Training Facility (FTF) consumes `Time` and `Electric Charge` in order to train (school) your kerbalnauts.
 
 <img src="https://raw.githubusercontent.com/zer0Kerbal/FieldTrainingFacility/master/img/HeroLogo_1920x1920.png" alt="FieldTrainingFacility" width="33%" height="33%">
@@ -69,7 +69,7 @@ Pay 20 science and your kerbal recieved 1 experience. Once your kerbal has gaine
 ### And you can have both installed
 
 * Someone like me will want to use both. What happens?
-* Both [Field Training Facility (FTF)][thread:FTF] and [Field Training Lab (FTL)][thread:FTL] work together when both are installed.
+* Both [Field Training Facility (FTF)][FTF] and [Field Training Lab (FTL)][FTL] work together when both are installed.
 * Result is shown below:*
 
 The longer you train with FTF, the less science it costs to level immediately using the FTL.
@@ -206,7 +206,7 @@ or [![CKAN][CKAN:img]][CKAN:url]
 [MOD:chlog]: https://raw.githubusercontent.com/zer0Kerbal/FieldTrainingLab/master/changelog.md  "Changelog"
 [MOD:contr]: https://github.com/zer0Kerbal/.github/blob/master/.github/CONTRIBUTING.md "Contributing"
 [MOD:discu]: https://github.com/zer0Kerbal/FieldTrainingLab/discussions "Discussions"
-[MOD:forum]: https://forum.kerbalspaceprogram.com/index.php?/topic/192742-*/ "FieldTrainingLab Forum Thread"
+[MOD:forum]: https://forum.kerbalspaceprogram.com/index.php?/topic/188841-*/ "FieldTrainingLab Forum Thread"
 [MOD:issue]: https://github.com/zer0Kerbal/FieldTrainingLab/issues "Issues"
 [MOD:licns]: https://github.com/zer0Kerbal/FieldTrainingLab/blob/master/LICENSE "Github License"
 [MOD:notic]: https://zer0kerbal.github.io/FieldTrainingLab/Notices "GitHub Pages"

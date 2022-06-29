@@ -30,6 +30,7 @@
 ### Code
 
 * Recompile for KSP 1.12.3
+* Using .NET 4.6.1
   * remove
     * [InstallChecker.cs]
     * [AssemblyVersion.tt]
@@ -44,6 +45,13 @@
   * licenses
   * [Kerbalism.cfg] v1.0.1.0
     * fixes #34 - [Bug 🐞]: Kerbalism.cfg
+
+### Add
+
+* Agent
+* Flag
+  * 512x320
+  * 64x40 truecolor_scaled
 
 ### Localization
 

@@ -240,8 +240,7 @@ or [![CKAN][CKAN:img]][CKAN:url]
 <!--- GPLv3 -->
 [LIC:url]: https://www.gnu.org/licenses/gpl-3.0-standalone.html "GPLv3"  
 [LIC:log]: https://i.postimg.cc/9FrwMgK6/GPL-17x17.png "GPLv3"
-[LIC:shd]:  https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/zer0Kerbal/FieldTrainingLab/master/json/license.json
-https://img.shields.io/badge/License-GPLv3-A42E2B?style=plastic&labelColor=white&logoColor=A42E2B&logo=gnu "GPLv3"
+[LIC:shd]:  https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/zer0Kerbal/FieldTrainingLab/master/json/license.json "GPLv3"
 
 <!--- CKAN -->
 [CKAN:img]: https://i.postimg.cc/x8XSVg4R/sj507JC.png "CKAN"

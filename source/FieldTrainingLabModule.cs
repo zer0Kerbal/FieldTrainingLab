@@ -118,7 +118,7 @@ namespace FieldTrainingLab
         {
             ProtoCrewMember crew = crewArr[index];
 
-            int lastLog = getCrewTrainedLevel(crew);
+            int lastLog = GetCrewTrainedLevel(crew);
 
             if (lastLog == 5)
             {
@@ -126,7 +126,7 @@ namespace FieldTrainingLab
                 return;
             }
 
-            float SciCost = calculateSciCost(levelUpExpTable[lastLog], crew);
+            float SciCost = CalculateSciCost(levelUpExpTable[lastLog], crew);
             if (ResearchAndDevelopment.Instance.Science < SciCost)
             {
                 ScreenMessages.PostScreenMessage("Insufficient Science Points.\n" + 
@@ -134,7 +134,7 @@ namespace FieldTrainingLab
                 return;
             }
             ResearchAndDevelopment.Instance.AddScience(-1 * SciCost, TransactionReasons.CrewRecruited);
-            removeKerbalTrainingExp(crew);
+            RemoveKerbalTrainingExp(crew);
             crew.flightLog.AddEntry(new FlightLog.Entry(crew.flightLog.Flight, trainingArr[lastLog+1], "Kerbin"));
             ScreenMessages.PostScreenMessage(levelNumber[lastLog] + " Training Complete : " + crew.name);
 
@@ -154,10 +154,10 @@ namespace FieldTrainingLab
             foreach (ProtoCrewMember crew in part.protoModuleCrew)
             {
                 if (index >= 8) break;
-                int lastLog = getCrewTrainedLevel(crew);
+                int lastLog = GetCrewTrainedLevel(crew);
 
                 crewArr[index] = crew;
-                int SciCost = (int) calculateSciCost(levelUpExpTable[lastLog], crew);
+                int SciCost = (int) CalculateSciCost(levelUpExpTable[lastLog], crew);
 
                 if (lastLog < 5) Events[eventArr[index]].guiName = "[" + lastLog + "->" + (lastLog + 1) + "] " + crew.name + "[" + SciCost + "p]";
                 else Events[eventArr[index]].guiName = "[5]" + crew.name;
@@ -171,9 +171,9 @@ namespace FieldTrainingLab
 
 
 #endregion
-        private int calculateSciCost(float baseValue, ProtoCrewMember crew)
+        private int CalculateSciCost(float baseValue, ProtoCrewMember crew)
         {
-            double calculated = baseValue * TrainFactor * (1 - (getKerbalTrainingExp(crew) / (TimeFactor * baseValue / 64)));
+            double calculated = baseValue * TrainFactor * (1 - (GetKerbalTrainingExp(crew) / (TimeFactor * baseValue / 64)));
             int ret = 0;
 
             if (this.vessel.mainBody.bodyName == "Kerbin" && this.vessel.LandedOrSplashed) ret = ((int) (calculated + 0.5));
@@ -184,7 +184,7 @@ namespace FieldTrainingLab
             return ret;
         }
 
-        private double getKerbalTrainingExp(ProtoCrewMember crew)
+        private double GetKerbalTrainingExp(ProtoCrewMember crew)
         {
             string lastExpStr = "0";
 
@@ -196,7 +196,7 @@ namespace FieldTrainingLab
             return double.Parse(lastExpStr);
         }
 
-        private void removeKerbalTrainingExp(ProtoCrewMember crew)
+        private void RemoveKerbalTrainingExp(ProtoCrewMember crew)
         {
             foreach (FlightLog.Entry entry in crew.careerLog.Entries.ToArray())
                 if (entry.type == "TrainingExp")
@@ -206,7 +206,7 @@ namespace FieldTrainingLab
                     crew.flightLog.Entries.Remove(entry);
         }
 
-        private int getCrewTrainedLevel(ProtoCrewMember crew)
+        private int GetCrewTrainedLevel(ProtoCrewMember crew)
         {
             int lastLog = 0;
             FlightLog totalLog = crew.careerLog.CreateCopy();

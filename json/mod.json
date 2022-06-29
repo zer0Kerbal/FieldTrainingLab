@@ -1,8 +1,8 @@
 {
-  "schemaVersion": 1,
-  "label": "Field Training Lab",
-  "labelColor": "darkgreen",
-  "message": "1.2.0.0",
-  "color": "orange",
-  "style": "plastic"  
+ "schemaVersion": 1,
+ "label": "Field Training Lab",
+ "labelColor": "BADA55",
+ "message": "1.2.1.0",
+ "color": "darkgreen",
+ "style": "plastic"
 }

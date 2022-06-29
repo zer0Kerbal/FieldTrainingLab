@@ -9,7 +9,7 @@
     <NoStandardLibraries>false</NoStandardLibraries>
     <AssemblyName>FieldTrainingLab</AssemblyName>
     <!-- <RootNamespace>FieldTrainingLab</RootNamespace> -->
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
     <LangVersion>latest</LangVersion>
@@ -42,7 +42,13 @@
     <Reference Include="$(K112)\KSP_x64_Data\Managed\Assembly-CSharp*.dll">
       <Private>False</Private>
     </Reference>
+    <Reference Include="$(K112)\KSP_x64_Data\Managed\Assembly-CSharp-firstpass.dll">
+      <Private>False</Private>
+    </Reference>
     <Reference Include="$(K112)\KSP_x64_Data\Managed\UnityEngine*.dll">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="$(K112)\KSP_x64_Data\Managed\UnityEngine.UI.dll">
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />

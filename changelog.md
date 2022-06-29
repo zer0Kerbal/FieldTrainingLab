@@ -38,6 +38,9 @@
 
 ### Localization
 
+* Add
+  * [readme.md] v2.1.2.0
+  * [quickstart.md] v1.0.1.1
 * updates #31 - Code Localization
 * updates #13 - Localization - Master
 * closes #22 - Simplified Chinese (简体中文) <zh-cn.cfg>

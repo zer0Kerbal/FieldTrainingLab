@@ -45,6 +45,8 @@ Pay 20 science and your kerbal recieved 1 experience. Once your kerbal has gaine
 * by 50% when your Field Training Lab is in orbit  
 * by 75% when your Field Training Lab is on other planet  
 
+<img src="https://raw.githubusercontent.com/zer0Kerbal/FieldTrainingLab/master/img/FTL-01.png" alt="FieldTrainingLab Hero" align="left" width="50%" height="50%">
+
 ### Cabin notes
 
 * You can tweak values by editing the part.cfg or using a ModuleManager patch.  
@@ -53,12 +55,14 @@ Pay 20 science and your kerbal recieved 1 experience. Once your kerbal has gaine
 
 ---
 
-### ![Field Training Lab][IMG:hero:0]  
+### [Field Training Facility (FTF)][FTF]  
 
 * If leveling up *immediately* is not realistic?
 * Do you think training needs time to complete?
 * then [Field Training Facility][thread:FTF] will be the answer for you.
 * The Field Training Facility (FTF) consumes `Time` and `Electric Charge` in order to train (school) your kerbalnauts.
+
+<img src="https://raw.githubusercontent.com/zer0Kerbal/FieldTrainingFacility/master/img/HeroLogo_1920x1920.png" alt="FieldTrainingFacility" width="33%" height="33%">
 
 ---
 

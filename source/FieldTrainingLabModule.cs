@@ -1,4 +1,23 @@
-﻿using UnityEngine;
+﻿/* Field Training Lab (FTL)
+ * This addon adds a training center in the science laboratory. Paying science points gets kerbals experience. For Kerbal Space Program.
+ * Copyright (C) 2016 EFour
+ * Copyright (C) 2019, 2022 zer0Kerbal (zer0Kerbal at hotmail dot com)
+ * 
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <https://www.gnu.org/licenses/>.
+*/
+
+using UnityEngine;
 using KSP.Localization;
 
 namespace FieldTrainingLab
@@ -99,7 +118,7 @@ namespace FieldTrainingLab
         {
             ProtoCrewMember crew = crewArr[index];
 
-            int lastLog = getCrewTrainedLevel(crew);
+            int lastLog = GetCrewTrainedLevel(crew);
 
             if (lastLog == 5)
             {
@@ -107,7 +126,7 @@ namespace FieldTrainingLab
                 return;
             }
 
-            float SciCost = calculateSciCost(levelUpExpTable[lastLog], crew);
+            float SciCost = CalculateSciCost(levelUpExpTable[lastLog], crew);
             if (ResearchAndDevelopment.Instance.Science < SciCost)
             {
                 ScreenMessages.PostScreenMessage("Insufficient Science Points.\n" + 
@@ -115,7 +134,7 @@ namespace FieldTrainingLab
                 return;
             }
             ResearchAndDevelopment.Instance.AddScience(-1 * SciCost, TransactionReasons.CrewRecruited);
-            removeKerbalTrainingExp(crew);
+            RemoveKerbalTrainingExp(crew);
             crew.flightLog.AddEntry(new FlightLog.Entry(crew.flightLog.Flight, trainingArr[lastLog+1], "Kerbin"));
             ScreenMessages.PostScreenMessage(levelNumber[lastLog] + " Training Complete : " + crew.name);
 
@@ -135,10 +154,10 @@ namespace FieldTrainingLab
             foreach (ProtoCrewMember crew in part.protoModuleCrew)
             {
                 if (index >= 8) break;
-                int lastLog = getCrewTrainedLevel(crew);
+                int lastLog = GetCrewTrainedLevel(crew);
 
                 crewArr[index] = crew;
-                int SciCost = (int) calculateSciCost(levelUpExpTable[lastLog], crew);
+                int SciCost = (int) CalculateSciCost(levelUpExpTable[lastLog], crew);
 
                 if (lastLog < 5) Events[eventArr[index]].guiName = "[" + lastLog + "->" + (lastLog + 1) + "] " + crew.name + "[" + SciCost + "p]";
                 else Events[eventArr[index]].guiName = "[5]" + crew.name;
@@ -152,9 +171,9 @@ namespace FieldTrainingLab
 
 
 #endregion
-        private int calculateSciCost(float baseValue, ProtoCrewMember crew)
+        private int CalculateSciCost(float baseValue, ProtoCrewMember crew)
         {
-            double calculated = baseValue * TrainFactor * (1 - (getKerbalTrainingExp(crew) / (TimeFactor * baseValue / 64)));
+            double calculated = baseValue * TrainFactor * (1 - (GetKerbalTrainingExp(crew) / (TimeFactor * baseValue / 64)));
             int ret = 0;
 
             if (this.vessel.mainBody.bodyName == "Kerbin" && this.vessel.LandedOrSplashed) ret = ((int) (calculated + 0.5));
@@ -165,7 +184,7 @@ namespace FieldTrainingLab
             return ret;
         }
 
-        private double getKerbalTrainingExp(ProtoCrewMember crew)
+        private double GetKerbalTrainingExp(ProtoCrewMember crew)
         {
             string lastExpStr = "0";
 
@@ -177,7 +196,7 @@ namespace FieldTrainingLab
             return double.Parse(lastExpStr);
         }
 
-        private void removeKerbalTrainingExp(ProtoCrewMember crew)
+        private void RemoveKerbalTrainingExp(ProtoCrewMember crew)
         {
             foreach (FlightLog.Entry entry in crew.careerLog.Entries.ToArray())
                 if (entry.type == "TrainingExp")
@@ -187,7 +206,7 @@ namespace FieldTrainingLab
                     crew.flightLog.Entries.Remove(entry);
         }
 
-        private int getCrewTrainedLevel(ProtoCrewMember crew)
+        private int GetCrewTrainedLevel(ProtoCrewMember crew)
         {
             int lastLog = 0;
             FlightLog totalLog = crew.careerLog.CreateCopy();
@@ -243,14 +262,14 @@ namespace FieldTrainingLab
             //? The config is only fully parsed after everything is fully loaded (which is why it's in OnStart())
             if (info == string.Empty)
             {
-                info += Localizer.Format("#FieldTrainingLab_manu"); // #FieldTrainingLab_manu = Kerbalnaut Training Industries, Inc.
-                info += "\n v" + Version.Text; // FTL Version Number text
-                info += "\n<color=#b4d455FF>" + Localizer.Format("#FieldTrainingLab_desc"); // #FieldTrainingLab_desc = Train Kerbals using Science Points
+                info += Localizer.Format("#FTL-manu"); // #FTL-manu = Kerbalnaut Training Industries, Inc.
+                info += "\n v" + Version.SText; // FTL Version Number text
+                info += "\n<color=#b4d455FF>" + Localizer.Format("#FTL-desc"); // #FTL-desc = Train Kerbals using Science Points
             }
             // #autoLOC_252004 = ElectricCharge
             // #FieldTrainingFacility_titl = FieldTrainingFacility
-            // #FieldTrainingLab_manu = Kerbalnaut Training Industries, Inc.
-            // #FieldTrainingLab_desc = Train Kerbals using time and Electric Charge
+            // #FTL-manu = Kerbalnaut Training Industries, Inc.
+            // #FTL-desc = Train Kerbals using time and Electric Charge
             return info;
         }
     }

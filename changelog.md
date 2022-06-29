@@ -17,9 +17,15 @@
 
 ### License
 
-* Update to
-  * GPLv3
+* Update to GPLv3
+  * was Expat/MIT
 * closes #32 - Update License to GPLv3
+
+### Convert Changelog
+
+* Convert from .cfg to md
+* Add missing information for earlier releases
+* closes #33 - Convert Changelog
 
 ### Localization
 

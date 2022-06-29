@@ -17,7 +17,7 @@ updated: 18 Apr 2022 -->
 
 [Home](./index.md)
 
-`BLURB`
+This mod adds a training center in the science laboratory. Paying science points gets kerbals experience. For Kerbal Space Program.
 
 ## Installation Instructions
 

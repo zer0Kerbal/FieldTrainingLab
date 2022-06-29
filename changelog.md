@@ -15,6 +15,12 @@
 * 28 Jun 2022
 * For Kerbal Space Program [1.12.x]
 
+### Localization
+
+* updates #31 - Code Localization
+* updates #13 - Localization - Master
+* closes #22 - Simplified Chinese (简体中文) <zh-cn.cfg>
+
 ### Status
 
 * Issues

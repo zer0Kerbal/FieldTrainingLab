@@ -57,7 +57,12 @@ updated: 03 Jun 2022
 
 ### Art Asset(s)
 
-* Flags
+* 5-Star-rating-condensed
+  <img src="https://freesvg.org/img/16231559165-star-rating-condensed.png" alt="5-Star-rating-condensed" width="10%" height="10%">  
+  * [![Public Domain](https://img.shields.io/badge/License-CC%20Public%20Domain-ef9421?labelColor=black&style=plastic&logoColor=ef9421&logo=creativecommons "CC Public Domain")][https://creativecommons.org/licenses/publicdomain/]
+  * https://freesvg.org/5-star-rating-condensed
+
+---
 
 ### Testing and Support
 

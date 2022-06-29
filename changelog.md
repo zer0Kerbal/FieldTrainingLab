@@ -15,6 +15,12 @@
 * 28 Jun 2022
 * For Kerbal Space Program [1.12.x]
 
+### License
+
+* Update to
+  * GPLv3
+* closes #32 - Update License to GPLv3
+
 ### Localization
 
 * updates #31 - Code Localization

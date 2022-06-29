@@ -45,7 +45,7 @@ Pay 20 science and your kerbal recieved 1 experience. Once your kerbal has gaine
 * by 50% when your Field Training Lab is in orbit  
 * by 75% when your Field Training Lab is on other planet  
 
-<img src="https://raw.githubusercontent.com/zer0Kerbal/FieldTrainingLab/master/img/FTL-01.png" alt="FieldTrainingLab Hero" align="left" width="50%" height="50%">
+<img src="https://raw.githubusercontent.com/zer0Kerbal/FieldTrainingLab/master/img/FTL-01.png" alt="FieldTrainingLab Hero" width="50%" height="50%">
 
 ### Cabin notes
 
@@ -66,15 +66,11 @@ Pay 20 science and your kerbal recieved 1 experience. Once your kerbal has gaine
 
 ---
 
-![Field Training Facility][IMG:hero:1]
-
 ### And you can have both installed
 
 * Someone like me will want to use both. What happens?
 * Both [Field Training Facility (FTF)][thread:FTF] and [Field Training Lab (FTL)][thread:FTL] work together when both are installed.
 * Result is shown below:*
-
-![Kerbalnaut Field Training][IMG:hero:2]  
 
 The longer you train with FTF, the less science it costs to level immediately using the FTL.
 
@@ -100,8 +96,6 @@ If you want one thing, you can install just one mod. If you install both, they w
 * GitHub Pages : See [Pages][MOD:pages]
 
 ---
-
-![Hero Image][IMG:hero:0]
 
 ### Youtube review by [`Kottabos Gaming`](https://forum.kerbalspaceprogram.com/index.php?/profile/36583-*/)
 

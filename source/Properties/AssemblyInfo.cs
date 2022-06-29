@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Kerbalnaut Training Industries, Inc.")]
 [assembly: AssemblyProduct("Field Training Lab")]
-[assembly: AssemblyCopyright("Copyright (c) 2016 Efour")]
+[assembly: AssemblyCopyright("Copyright (c) 2016 Efour (c) 2019, 2022 zer0Kerbal")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

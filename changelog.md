@@ -27,6 +27,15 @@
 * Add missing information for earlier releases
 * closes #33 - Convert Changelog
 
+### Code
+
+* Recompile for KSP 1.12.3
+  * remove
+    * [InstallChecker.cs]
+    * [AssemblyVersion.tt]
+  * update [Version.tt]
+  * remove
+
 ### Localization
 
 * updates #31 - Code Localization

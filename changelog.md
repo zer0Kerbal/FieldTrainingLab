@@ -33,8 +33,17 @@
   * remove
     * [InstallChecker.cs]
     * [AssemblyVersion.tt]
-  * update [Version.tt]
-  * remove
+    * [Log.cs]
+  * update [Version.tt]]
+
+### Compatibility
+
+* Rename
+  * Patches to Compatibility
+* Update
+  * licenses
+  * [Kerbalism.cfg] v1.0.1.0
+    * fixes #34 - [Bug 🐞]: Kerbalism.cfg
 
 ### Localization
 

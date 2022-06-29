@@ -262,14 +262,14 @@ namespace FieldTrainingLab
             //? The config is only fully parsed after everything is fully loaded (which is why it's in OnStart())
             if (info == string.Empty)
             {
-                info += Localizer.Format("#FieldTrainingLab_manu"); // #FieldTrainingLab_manu = Kerbalnaut Training Industries, Inc.
+                info += Localizer.Format("#FTL-manu"); // #FTL-manu = Kerbalnaut Training Industries, Inc.
                 info += "\n v" + Version.SText; // FTL Version Number text
-                info += "\n<color=#b4d455FF>" + Localizer.Format("#FieldTrainingLab_desc"); // #FieldTrainingLab_desc = Train Kerbals using Science Points
+                info += "\n<color=#b4d455FF>" + Localizer.Format("#FTL-desc"); // #FTL-desc = Train Kerbals using Science Points
             }
             // #autoLOC_252004 = ElectricCharge
             // #FieldTrainingFacility_titl = FieldTrainingFacility
-            // #FieldTrainingLab_manu = Kerbalnaut Training Industries, Inc.
-            // #FieldTrainingLab_desc = Train Kerbals using time and Electric Charge
+            // #FTL-manu = Kerbalnaut Training Industries, Inc.
+            // #FTL-desc = Train Kerbals using time and Electric Charge
             return info;
         }
     }

@@ -1,4 +1,23 @@
-﻿using UnityEngine;
+﻿/* Field Training Lab (FTL)
+ * This addon adds a training center in the science laboratory. Paying science points gets kerbals experience. For Kerbal Space Program.
+ * Copyright (C) 2016 EFour
+ * Copyright (C) 2019, 2022 zer0Kerbal (zer0Kerbal at hotmail dot com)
+ * 
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <https://www.gnu.org/licenses/>.
+*/
+
+using UnityEngine;
 using KSP.Localization;
 
 namespace FieldTrainingLab
@@ -244,7 +263,7 @@ namespace FieldTrainingLab
             if (info == string.Empty)
             {
                 info += Localizer.Format("#FieldTrainingLab_manu"); // #FieldTrainingLab_manu = Kerbalnaut Training Industries, Inc.
-                info += "\n v" + Version.Text; // FTL Version Number text
+                info += "\n v" + Version.SText; // FTL Version Number text
                 info += "\n<color=#b4d455FF>" + Localizer.Format("#FieldTrainingLab_desc"); // #FieldTrainingLab_desc = Train Kerbals using Science Points
             }
             // #autoLOC_252004 = ElectricCharge

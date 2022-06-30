@@ -66,7 +66,7 @@ namespace FieldTrainingLab
         [KSPField]
         public float TimeFactor = 426 * 6 * 60 * 60; // 1Year = 426day, 1day = 6hour, 1hour = 60minutes, 1min = 60sec
 
-        [KSPField(isPersistant = true, guiActive = true, guiName = "Training Lab Status", groupName = "TrainingLab", groupDisplayName = "Training Lab v" + Version.Text, groupStartCollapsed = true)]
+        [KSPField(isPersistant = true, guiActive = true, guiName = "Training Lab Status", groupName = "TrainingLab", groupDisplayName = "Training Lab v" + Version.SText, groupStartCollapsed = true)]
         public bool TrainingStatus = false;
 
         [KSPField(guiActive = false, guiName = "Science Point", groupName = "TrainingLab", groupDisplayName = "Field Training Lab", groupStartCollapsed = true)]

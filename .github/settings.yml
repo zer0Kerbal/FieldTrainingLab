@@ -1,8 +1,8 @@
-# settings.yml 1.0.9.4
+# settings.yml 1.0.9.7
 # this file: CC BY-ND 4.0
 # zer0Kerbal
 # created 01 Jan 2022
-# updated 03 Jun 2022
+# updated 01 Oct 2022
 # These settings are synced to GitHub by https://probot.github.io/apps/settings/
 # See https://docs.github.com/en/rest/reference/repos#update-a-repository for all available settings.
 
@@ -17,7 +17,7 @@ repository:
   homepage: https://forum.kerbalspaceprogram.com/index.php?/topic/188841-*/
 
   # A comma-separated list of topics to set on the repository
-  topics: training,ftl,mod,ksp,kerbal-space-program,stars,experience,kerbal,kerbalspaceprogram,kerbal-space,training-center,ksp-mods,training-lab,kerbal-mods,training-facility,pay-science-point,training-costs,science-laboratories,kerbal,ksp,kerbal-space-program,zedk
+  topics: training,ftl,stars,experience,kerbalspaceprogram,kerbal-space,training-center,ksp-mods,training-lab,kerbal-mods,training-facility,pay-science-point,training-costs,science-laboratories,kerbal,ksp,kerbal-space-program,zedk,contributions-welcome,hacktoberfest,mods
 
 # Labels: define labels for Issues and Pull Requests
 labels:
@@ -28,10 +28,6 @@ labels:
   - name: "help wanted"
     color: 008672
     description: "assistance, help, input solicited"
-
-  - name: discussion
-    color: 6495ED
-    description: "duplicated issue - it happens"
 
   - name: duplicate
     color: FFFFF0
@@ -119,16 +115,6 @@ labels:
     color: FBCA04
     description: issue originates from external sources
 
-  - name: "type: localization"
-    oldname: localization
-    # include the old name to rename an existing label
-    color: FFFFF0
-    description: related to localization and translations
-
-  - name: "type: infrastructure"
-    color: ffdda8
-    description: improvements or additions to project infrastructure
-
   - name: "type: automation"
     color: fbca04
     description: issues for automation actions
@@ -136,6 +122,15 @@ labels:
   - name: "type: fix"
     color: 91ca55
     description: Iterations on existing features or infrastructure.
+
+  - name: "type: infrastructure"
+    color: ffdda8
+    description: improvements or additions to project infrastructure
+
+  - name: "type: localization"
+    oldname: localization
+    color: FFFFF0
+    description: related to localization and translations
 
   - name: "type: testing"
     color: fbca04
@@ -149,6 +144,10 @@ labels:
     oldname: discussion
     color: d4c5f9
     description: Questions, queries, posers, proposals and info that requires discussion.
+
+  - name: "type: imgbot"
+    color: d4c5f9
+    description: imgbot automation.
 
   - name: "type: docs"
     color: fef2c0
@@ -230,16 +229,44 @@ labels:
     color: e6e6e6
     description: No action will be taken at this time
 
+  - name: "hacktoberfest"
+    color: ff9900
+    description: flag for entry into hacktoberfest
+
+  - name: "hacktoberfest-accepted"
+    color: ff9900
+    description: flag for stating PR is accepted as appropriate for hacktoberfest
+
+  - name: "good-first-issue"
+    color: AEF923
+    description: flag for inclusion into good-first-issues listing
+
+  - name: "contributions-welcome"
+    color: AEF923
+    description: flag for inclusion into contributions-welcome listing
+
+  - name: "beginner-friendly"
+    color: AEF923
+    description: flag for inclusion into beginner-friendly listing
+
+  - name: "invalid"
+    color: FFFF00
+    description: flagged as invalid
+
+  - name: "spam"
+    color: EB212E
+    description: spam flag
+
 # Milestones: define milestones for Issues and Pull Requests
-milestones:
-  - title: 1.2.1.0-release
-    description: progress toward 1.2.1.0-release
-    state: open
+# milestones:
+#   - title: 1.2.1.0-release
+#     description: progress toward 1.2.1.0-release
+#     state: open
 
-  - title: Localization - Master
-    description: progress toward total localization
-    state: open
+#   - title: Localization - Master
+#     description: progress toward total localization
+#     state: open
 
-  - title: Localization - Code
-    description: progress toward CODE localization (only for add-ons - plugins - etc)
-    state: open
+#   - title: Localization - Code
+#     description: progress toward CODE localization (only for add-ons - plugins - etc)
+#     state: open

@@ -26,7 +26,7 @@ namespace FieldTrainingLab
 	/// <summary></summary><seealso cref="PartModule" />
 	public class FieldTrainingLab : PartModule
 	{
-        readonly ProtoCrewMember[] crewArr = new ProtoCrewMember[8];
+		readonly ProtoCrewMember[] crewArr = new ProtoCrewMember[8];
 		readonly string[] eventArr = 
 		{
 			"TrainKerbalInside0",
@@ -59,63 +59,63 @@ namespace FieldTrainingLab
 		[KSPField]
 		public int TrainFactor = 20;
 
-        /// <summary>Space situational cost adjustment</summary>
-        [KSPField]
+		/// <summary>Space situational cost adjustment</summary>
+		[KSPField]
 		public float inSpace = 0.5f;
 
-        /// <summary>Landed situational cost adjustment</summary>
-        [KSPField]
+		/// <summary>Landed situational cost adjustment</summary>
+		[KSPField]
 		public float Landed = 0.25f;
 
-        /// <summary>Time Factor</summary>
-        [KSPField]
+		/// <summary>Time Factor</summary>
+		[KSPField]
 		public float TimeFactor = 426 * 6 * 60 * 60; // 1Year = 426day, 1day = 6hour, 1hour = 60minutes, 1min = 60sec
 
-        /// <summary>Training Lab Status</summary>
-        [KSPField(isPersistant = true, guiActive = true, groupStartCollapsed = true, groupName = __GroupName__, guiName = "#FTL-status")]
+		/// <summary>Training Lab Status</summary>
+		[KSPField(isPersistant = true, guiActive = true, groupStartCollapsed = true, groupName = __GroupName__, guiName = "#FTL-status")]
 		public bool TrainingStatus = false;
 
-        /// <summary>Science Points Remaining</summary>
-        [KSPField(guiActive = false, groupName = __GroupName__, guiName = "#FTL-funds-sci")]
+		/// <summary>Science Points Remaining</summary>
+		[KSPField(guiActive = false, groupName = __GroupName__, guiName = "#FTL-funds-sci")]
 		public int SciRemain;
 
-        /// <summary>Training 0</summary>
-        [KSPEvent(guiActive = false, groupName = __GroupName__, guiName = "#FTL-training-0")]
+		/// <summary>Training 0</summary>
+		[KSPEvent(guiActive = false, groupName = __GroupName__, guiName = "#FTL-training-0")]
 		public void TrainKerbalInside0()
 		{ TrainKerbal(0); }
 
-        /// <summary>Training 1</summary>
-        [KSPEvent(guiActive = false, groupName = __GroupName__, guiName = "#FTL-training-1")]
+		/// <summary>Training 1</summary>
+		[KSPEvent(guiActive = false, groupName = __GroupName__, guiName = "#FTL-training-1")]
 		public void TrainKerbalInside1()
 		{ TrainKerbal(1); }
 
-        /// <summary>Training 2</summary>
-        [KSPEvent(guiActive = false, groupName = __GroupName__, guiName = "#FTL-training-2")]
+		/// <summary>Training 2</summary>
+		[KSPEvent(guiActive = false, groupName = __GroupName__, guiName = "#FTL-training-2")]
 		public void TrainKerbalInside2()
 		{ TrainKerbal(2); }
 
-        /// <summary>Training 3</summary>
-        [KSPEvent(guiActive = false, groupName = __GroupName__, guiName = "#FTL-training-3")]
+		/// <summary>Training 3</summary>
+		[KSPEvent(guiActive = false, groupName = __GroupName__, guiName = "#FTL-training-3")]
 		public void TrainKerbalInside3()
 		{ TrainKerbal(3); }
 
-        /// <summary>Training 4</summary>
-        [KSPEvent(guiActive = false, groupName = __GroupName__, guiName = "#FTL-training-4")]
+		/// <summary>Training 4</summary>
+		[KSPEvent(guiActive = false, groupName = __GroupName__, guiName = "#FTL-training-4")]
 		public void TrainKerbalInside4()
 		{ TrainKerbal(4); }
 
-        /// <summary>Training 5</summary>
-        [KSPEvent(guiActive = false, groupName = __GroupName__, guiName = "#FTL-training-5")]
+		/// <summary>Training 5</summary>
+		[KSPEvent(guiActive = false, groupName = __GroupName__, guiName = "#FTL-training-5")]
 		public void TrainKerbalInside5()
 		{ TrainKerbal(5); }
 
-        /// <summary>Training 6</summary>
-        [KSPEvent(guiActive = false, groupName = __GroupName__, guiName = "#FTL-training-6")]
+		/// <summary>Training 6</summary>
+		[KSPEvent(guiActive = false, groupName = __GroupName__, guiName = "#FTL-training-6")]
 		public void TrainKerbalInside6()
 		{ TrainKerbal(6); }
 
-        /// <summary>Training 7</summary>
-        [KSPEvent(guiActive = false, groupName = __GroupName__, guiName = "#FTL-training-7")]
+		/// <summary>Training 7</summary>
+		[KSPEvent(guiActive = false, groupName = __GroupName__, guiName = "#FTL-training-7")]
 		public void TrainKerbalInside7()
 		{ TrainKerbal(7); }
 
@@ -135,7 +135,7 @@ namespace FieldTrainingLab
 
 			float SciCost = CalculateSciCost(levelUpExpTable[lastLog], crew);
 			if (ResearchAndDevelopment.Instance.Science < SciCost)
-            {
+			{
 				ScreenMessages.PostScreenMessage(Localizer.Format("#FTL-insufficent", Localizer.Format("#FTL-funds-sci"), SciCost, ResearchAndDevelopment.Instance.Science));
 				// ScreenMessages.PostScreenMessage("Insufficient Science Points.\n" + "Needed : " + SciCost + ", Remain : " + ResearchAndDevelopment.Instance.Science);
 				return;
@@ -152,31 +152,31 @@ namespace FieldTrainingLab
 #region public functions
 
 		/// <summary>OnAwake</summary>
-        public override void OnAwake() { base.OnAwake(); }
+		public override void OnAwake() { base.OnAwake(); }
 
 		/// <summary>OnStart</summary>
-        public override void OnStart(StartState state)
-        {
-            base.OnStart(state);
+		public override void OnStart(StartState state)
+		{
+			base.OnStart(state);
 
-            if (HighLogic.CurrentGame.Parameters.CustomParams<FTL_Options>().coloredPAW)
-                Fields["TrainingStatus"].group.displayName = System.String.Format("<color=#FEDD00>" + Localizer.Format("#FTL-nameV", Version.SText) + "</color>");
-            else
-                Fields["TrainingStatus"].group.displayName = Localizer.Format("#FTL-nameV", Version.SText);
-        }
+			if (HighLogic.CurrentGame.Parameters.CustomParams<FTL_Options>().coloredPAW)
+				Fields["TrainingStatus"].group.displayName = System.String.Format("<color=#FEDD00>" + Localizer.Format("#FTL-nameV", Version.SText) + "</color>");
+			else
+				Fields["TrainingStatus"].group.displayName = Localizer.Format("#FTL-nameV", Version.SText);
+		}
 
-        /// <summary>OnInactive</summary>
-        public override void OnInactive() { base.OnInactive(); }
+		/// <summary>OnInactive</summary>
+		public override void OnInactive() { base.OnInactive(); }
 
-        /// <summary>OnInitialize</summary>
-        public override void OnInitialize() { base.OnInitialize(); }
+		/// <summary>OnInitialize</summary>
+		public override void OnInitialize() { base.OnInitialize(); }
 
-        /// <summary>OnFixedUpdate</summary>
-        public override void OnFixedUpdate()
+		/// <summary>OnFixedUpdate</summary>
+		public override void OnFixedUpdate()
 		{ base.OnFixedUpdate(); }
 		
-        /// <summary>OnUpdate</summary>
-        public override void OnUpdate()
+		/// <summary>OnUpdate</summary>
+		public override void OnUpdate()
 		{
 			if (HighLogic.CurrentGame.Mode != Game.Modes.CAREER) return;
 			Fields["SciRemain"].guiActive = true;
@@ -221,10 +221,10 @@ namespace FieldTrainingLab
 			return ret;
 		}
 
-        /// <summary>GetKerbalTrainingExp</summary>
-        /// <param name="crew"></param>
-        /// <returns></returns>
-        private double GetKerbalTrainingExp(ProtoCrewMember crew)
+		/// <summary>GetKerbalTrainingExp</summary>
+		/// <param name="crew"></param>
+		/// <returns></returns>
+		private double GetKerbalTrainingExp(ProtoCrewMember crew)
 		{
 			string lastExpStr = "0";
 
@@ -236,9 +236,9 @@ namespace FieldTrainingLab
 			return double.Parse(lastExpStr);
 		}
 
-        /// <summary>RemoveKerbalTrainingExp</summary>
-        /// <param name="crew"></param>
-        private void RemoveKerbalTrainingExp(ProtoCrewMember crew)
+		/// <summary>RemoveKerbalTrainingExp</summary>
+		/// <param name="crew"></param>
+		private void RemoveKerbalTrainingExp(ProtoCrewMember crew)
 		{
 			foreach (FlightLog.Entry entry in crew.careerLog.Entries.ToArray())
 				if (entry.type == "TrainingExp")
@@ -248,10 +248,10 @@ namespace FieldTrainingLab
 					crew.flightLog.Entries.Remove(entry);
 		}
 
-        /// <summary>GetCrewTrainedLevel</summary>
-        /// <param name="crew"></param>
-        /// <returns></returns>
-        private int GetCrewTrainedLevel(ProtoCrewMember crew)
+		/// <summary>GetCrewTrainedLevel</summary>
+		/// <param name="crew"></param>
+		/// <returns></returns>
+		private int GetCrewTrainedLevel(ProtoCrewMember crew)
 		{
 			int lastLog = 0;
 			FlightLog totalLog = crew.careerLog.CreateCopy();
@@ -285,8 +285,8 @@ namespace FieldTrainingLab
 			if (info == string.Empty)
 			{
 				info += Localizer.Format("#FTL-Agency-titl");
-                info += "\n\n<color=#FEDD00>" + Localizer.Format("#FTL-Agency-desc") + "\n";
-                info += "\n" + Localizer.Format("#FTL-nameV", Version.SText);
+				info += "\n\n<color=#FEDD00>" + Localizer.Format("#FTL-Agency-desc") + "\n";
+				info += "\n" + Localizer.Format("#FTL-nameV", Version.SText);
 				info += "\n<color=#B4D455>" + Localizer.Format("#FTL-desc");
 				info += "</color>\n\n";
 			}

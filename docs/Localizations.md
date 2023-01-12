@@ -22,7 +22,7 @@ updated: 03 Jun 2022 -->
 has been translated into the following languages:
 
 * ![English][EN] English <us-en.cfg>
-* ![简体中文][CN] Simplified Chinese (简体中文) <zh-cn.cfg>  
+* ![简体中文][CN] Simplified Chinese (简体中文) <zh-cn.cfg>  thank you to [@JFYoung01](https://github.com/JFYoung01)
 
 __These localizations for KSP and its DLC's are available through Steam:__
 

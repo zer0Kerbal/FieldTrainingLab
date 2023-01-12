@@ -10,7 +10,7 @@
 | spacedock  | (https://spacedock.info/mod/971)                                  |
 | ckan       | FieldTrainingLab                                                  |
 
-## Version 1.2.1.0 - `<Clean Blackboards>` edition
+## Version 1.2.1.0-release - `<Clean Blackboards>` edition
 
 * 28 Jun 2022
 * For Kerbal Space Program [1.12.x]
@@ -100,7 +100,7 @@
 * KSP 1.9.1
 * .NET 4.8
 
-### Code
+### Code 1.2.0.0
 
 * update
   * Editor GetInfo() to be more informative
@@ -179,14 +179,14 @@
 
 ### Adoption by zer0Kerbal
 
-### Code
+### Code 1.0.3.4
 
 * Added
   * PAW grouping (really needed for these mods)
   * a blurb in the editor getInfo{}
   * [InstallChecker.cs]
 
-### Compatibility
+### Compatibility 1.0.3.4
 
 * Updated
   * [FieldTrainingLab.cfg]

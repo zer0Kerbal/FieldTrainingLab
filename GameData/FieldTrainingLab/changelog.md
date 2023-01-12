@@ -10,7 +10,7 @@
 | spacedock  | (https://spacedock.info/mod/971)                                  |
 | ckan       | FieldTrainingLab                                                  |
 
-## Version 1.2.1.0 - `<Clean Blackboards>` edition
+## Version 1.2.1.0-release - `<Clean Blackboards>` edition
 
 * 28 Jun 2022
 * For Kerbal Space Program [1.12.x]

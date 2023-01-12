@@ -13,7 +13,7 @@ updated: 24 Jun 2022 -->
 
 # Field Training Lab (FTL)
 
-This mod provides a training system (school) for your kerbalnauts by adding a *Field Training Lab* into all science laboratories.
+This mod provides training for your kerbalnauts by adding a *Field Training Lab* into all science laboratories.
 
 *Field Training Lab* provides a training method that consumes science points to earn a kerbal experience (stars).
 
@@ -91,7 +91,7 @@ If you want one thing, you can install just one mod. If you install both, they w
 ### See More
 
 * Discussions and news on this mod: See [Discussions][MOD:discu] or [KSP Forums][MOD:forum]
-* Changelog Summary for more details of changes : See [ChangeLog][MOD:chlog]
+* Changelog Summary for more details of changes: See [ChangeLog][MOD:chlog]
 * Known Issues for more details of feature requests and known issues : See [Known Issues][MOD:issue]
 * GitHub Pages : See [Pages][MOD:pages]
 
@@ -112,7 +112,7 @@ If you want one thing, you can install just one mod. If you install both, they w
 ### Localization
 
 >* ![English][EN] English
->* ![中文][CN] Simplified Chinese (中文)
+>* ![中文][CN] Simplified Chinese (中文) thank you to [@JFYoung01](https://github.com/JFYoung01)
 >* ***your translation here***
 >
 > HELP WANTED - See the [README in the Localization folder][lreadme] or the [Quickstart Guide][qstart] for instructions for adding or improving translations. [GitHub][GitHub:url] push is the best way to contribute. *Additions and corrections welcome!*
@@ -240,8 +240,7 @@ or [![CKAN][CKAN:img]][CKAN:url]
 <!--- GPLv3 -->
 [LIC:url]: https://www.gnu.org/licenses/gpl-3.0-standalone.html "GPLv3"  
 [LIC:log]: https://i.postimg.cc/9FrwMgK6/GPL-17x17.png "GPLv3"
-[LIC:shd]:  https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/zer0Kerbal/FieldTrainingLab/master/json/license.json
-https://img.shields.io/badge/License-GPLv3-A42E2B?style=plastic&labelColor=white&logoColor=A42E2B&logo=gnu "GPLv3"
+[LIC:shd]:  https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/zer0Kerbal/FieldTrainingLab/master/json/license.json "GPLv3"
 
 <!--- CKAN -->
 [CKAN:img]: https://i.postimg.cc/x8XSVg4R/sj507JC.png "CKAN"
@@ -312,7 +311,7 @@ https://img.shields.io/badge/License-GPLv3-A42E2B?style=plastic&labelColor=white
 [reddit]: https://www.reddit.com/user/zer0Kerbal
 [twitch]: https://www.twitch.tv/zer0kerbal
 [twitter]: https://twitter.com/zer0Kerbal
-[youtube]: https://www.youtube.com/channel/UCp9c8IaK4Gjgfj3O9QxrbDw
+[youtube]: https://www.youtube.com/@zer0Kerbal
 
 [efour]: https://forum.kerbalspaceprogram.com/index.php?/profile/152350-*/ "Efour"
 [zer0Kerbal]: https://forum.kerbalspaceprogram.com/index.php?/profile/190933-*/ "zer0Kerbal"

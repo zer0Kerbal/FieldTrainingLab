@@ -17,13 +17,13 @@
   * Release for Kerbal Space Program 1.12.4
   * by [zer0Kerbal](https://github.com/zer0Kerbal)
 
-### Summary 1.2.3.0
+### Summary 1.2.2.0
 
 * Recompiled for 1.12.4 with .NET 4.7.2 using C# 7.0
 
-### Changes 1.2.3.0
+### Changes 1.2.2.0
 
-#### Code 1.2.3.0
+#### Code 1.2.2.0
 
 * Recompile for
   * KSP 1.12.2
@@ -31,14 +31,14 @@
   * C# 7.0
   * <FieldTrainingLab.dll> v1.2.1.14 --> 1.2.2.15
 
-#### Localization 1.2.3.0
+#### Localization 1.2.2.0
 
 * Code is localized.
   * <en-us.cfg> 1.0.2.0
   * <zh-cn.cfg> v1.0.1.0
   * add tags
 
-#### Compatability 1.2.3.0
+#### Compatability 1.2.2.0
 
 * Add
   * <StationPartsExpansionRedux.cfg> v1.0.0.0
@@ -48,12 +48,12 @@
   * <Kerbalism.cfg> v1.3.0.0
 * courtesy of [Gordon Dry](https://forum.kerbalspaceprogram.com/index.php?/profile/163177*/)
 
-#### Config 1.2.3.0
+#### Config 1.2.2.0
 
 * lint and update patches
 * add tags to parts
 
-#### Status 1.2.3.0
+#### Status 1.2.2.0
 
 * Issues
 

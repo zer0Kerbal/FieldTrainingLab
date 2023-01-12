@@ -100,7 +100,7 @@
 * KSP 1.9.1
 * .NET 4.8
 
-### Code
+### Code 1.2.0.0
 
 * update
   * Editor GetInfo() to be more informative
@@ -179,14 +179,14 @@
 
 ### Adoption by zer0Kerbal
 
-### Code
+### Code 1.0.3.4
 
 * Added
   * PAW grouping (really needed for these mods)
   * a blurb in the editor getInfo{}
   * [InstallChecker.cs]
 
-### Compatibility
+### Compatibility 1.0.3.4
 
 * Updated
   * [FieldTrainingLab.cfg]

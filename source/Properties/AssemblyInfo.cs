@@ -1,6 +1,6 @@
 ﻿/* Field Training Lab (FTL)
  * This addon adds a training center in the science laboratory. Paying science points gets kerbals experience. For Kerbal Space Program.
- * Copyright (C) 2016 EFour
+ * Copyright (C) 2016 Efour
  * Copyright (C) 2019, 2022, 2023 zer0Kerbal (zer0Kerbal at hotmail dot com)
  * 
  * This program is free software: you can redistribute it and/or modify
@@ -28,8 +28,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyProduct("Field Training Lab (FTL)")]
 [assembly: AssemblyCopyright("Copyright (c) 2016 Efour (c) 2019, 2022 zer0Kerbal")]
 [assembly: AssemblyTrademark("Trademark (tm) 2016 Efour (c) 2019, 2023 zer0Kerbal")]
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("Kerbal")]
+[assembly: AssemblyCulture("")]
 
 [assembly: ComVisible(false)]
 [assembly: Guid("AD686AF3-DDDC-4991-909F-EAD9C16C469B")]

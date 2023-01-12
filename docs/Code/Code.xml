@@ -1,0 +1,192 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FieldTrainingLab</name>
+    </assembly>
+    <members>
+        <member name="T:FieldTrainingLab.FieldTrainingLab">
+            <summary></summary><seealso cref="T:PartModule" />
+        </member>
+        <member name="F:FieldTrainingLab.FieldTrainingLab.TrainFactor">
+            <summary>Train Factor</summary>
+        </member>
+        <member name="F:FieldTrainingLab.FieldTrainingLab.inSpace">
+            <summary>Space situational cost adjustment</summary>
+        </member>
+        <member name="F:FieldTrainingLab.FieldTrainingLab.Landed">
+            <summary>Landed situational cost adjustment</summary>
+        </member>
+        <member name="F:FieldTrainingLab.FieldTrainingLab.TimeFactor">
+            <summary>Time Factor</summary>
+        </member>
+        <member name="F:FieldTrainingLab.FieldTrainingLab.TrainingStatus">
+            <summary>Training Lab Status</summary>
+        </member>
+        <member name="F:FieldTrainingLab.FieldTrainingLab.SciRemain">
+            <summary>Science Points Remaining</summary>
+        </member>
+        <member name="M:FieldTrainingLab.FieldTrainingLab.TrainKerbalInside0">
+            <summary>Training 0</summary>
+        </member>
+        <member name="M:FieldTrainingLab.FieldTrainingLab.TrainKerbalInside1">
+            <summary>Training 1</summary>
+        </member>
+        <member name="M:FieldTrainingLab.FieldTrainingLab.TrainKerbalInside2">
+            <summary>Training 2</summary>
+        </member>
+        <member name="M:FieldTrainingLab.FieldTrainingLab.TrainKerbalInside3">
+            <summary>Training 3</summary>
+        </member>
+        <member name="M:FieldTrainingLab.FieldTrainingLab.TrainKerbalInside4">
+            <summary>Training 4</summary>
+        </member>
+        <member name="M:FieldTrainingLab.FieldTrainingLab.TrainKerbalInside5">
+            <summary>Training 5</summary>
+        </member>
+        <member name="M:FieldTrainingLab.FieldTrainingLab.TrainKerbalInside6">
+            <summary>Training 6</summary>
+        </member>
+        <member name="M:FieldTrainingLab.FieldTrainingLab.TrainKerbalInside7">
+            <summary>Training 7</summary>
+        </member>
+        <member name="M:FieldTrainingLab.FieldTrainingLab.OnAwake">
+            <summary>OnAwake</summary>
+        </member>
+        <member name="M:FieldTrainingLab.FieldTrainingLab.OnStart(PartModule.StartState)">
+            <summary>OnStart</summary>
+        </member>
+        <member name="M:FieldTrainingLab.FieldTrainingLab.OnInactive">
+            <summary>OnInactive</summary>
+        </member>
+        <member name="M:FieldTrainingLab.FieldTrainingLab.OnInitialize">
+            <summary>OnInitialize</summary>
+        </member>
+        <member name="M:FieldTrainingLab.FieldTrainingLab.OnFixedUpdate">
+            <summary>OnFixedUpdate</summary>
+        </member>
+        <member name="M:FieldTrainingLab.FieldTrainingLab.OnUpdate">
+            <summary>OnUpdate</summary>
+        </member>
+        <member name="M:FieldTrainingLab.FieldTrainingLab.CalculateSciCost(System.Single,ProtoCrewMember)">
+            <summary>Calculate Science Cost</summary>
+            <param name="baseValue"></param>
+            <param name="crew"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FieldTrainingLab.FieldTrainingLab.GetKerbalTrainingExp(ProtoCrewMember)">
+            <summary>GetKerbalTrainingExp</summary>
+            <param name="crew"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FieldTrainingLab.FieldTrainingLab.RemoveKerbalTrainingExp(ProtoCrewMember)">
+            <summary>RemoveKerbalTrainingExp</summary>
+            <param name="crew"></param>
+        </member>
+        <member name="M:FieldTrainingLab.FieldTrainingLab.GetCrewTrainedLevel(ProtoCrewMember)">
+            <summary>GetCrewTrainedLevel</summary>
+            <param name="crew"></param>
+            <returns></returns>
+        </member>
+        <member name="F:FieldTrainingLab.FieldTrainingLab.info">
+            <summary>Module information shown in editors</summary>
+        </member>
+        <member name="M:FieldTrainingLab.FieldTrainingLab.GetInfo">
+            <summary>create the GetInfo string</summary>
+        </member>
+        <member name="T:FieldTrainingLab.FTL_Options">
+            <summary>Game Settings FTL Options</summary>
+        </member>
+        <member name="P:FieldTrainingLab.FTL_Options.Title">
+            <summary>Settings Title</summary>
+        </member>
+        <member name="P:FieldTrainingLab.FTL_Options.Section">
+            <summary>Settings Section</summary>
+        </member>
+        <member name="P:FieldTrainingLab.FTL_Options.DisplaySection">
+            <summary>Settings Display Section</summary>
+        </member>
+        <member name="P:FieldTrainingLab.FTL_Options.SectionOrder">
+            <summary>Settings Section Order</summary>
+        </member>
+        <member name="P:FieldTrainingLab.FTL_Options.GameMode">
+            <summary>Settings  Game Mode</summary>
+        </member>
+        <member name="F:FieldTrainingLab.FTL_Options.enableFTL">
+            <summary>Settings module master enable/disable</summary>
+        </member>
+        <member name="F:FieldTrainingLab.FTL_Options.UIstring">
+            <summary>Settings Payment</summary>
+        </member>
+        <member name="F:FieldTrainingLab.FTL_Options.requireSciencePoints">
+            <summary>require science points to gain experience</summary>        
+        </member>
+        <member name="F:FieldTrainingLab.FTL_Options.costScience">
+            <summary>number of science points per experience point</summary> 
+        </member>
+        <member name="F:FieldTrainingLab.FTL_Options.requireReputationPoints">
+            <summary>require Reputation to gain experience</summary>
+        </member>
+        <member name="F:FieldTrainingLab.FTL_Options.costReputation">
+            <summary>number of Reputation per experience point</summary>
+        </member>
+        <member name="F:FieldTrainingLab.FTL_Options.requireFunds">
+            <summary>require Funds to gain experience</summary>       
+        </member>
+        <member name="F:FieldTrainingLab.FTL_Options.costFunds">
+            <summary>amount of Funds per experience point</summary>  
+        </member>
+        <member name="F:FieldTrainingLab.FTL_Options.KSPMail">
+            <summary>Settings - KSP Mail</summary>
+        </member>
+        <member name="F:FieldTrainingLab.FTL_Options.coloredPAW">
+            <summary>Settings allow colored PAW</summary>
+        </member>
+        <member name="P:FieldTrainingLab.FTL_Options.HasPresets">
+            <summary>Had Presets?</summary>
+        </member>
+        <member name="M:FieldTrainingLab.FTL_Options.SetDifficultyPreset(GameParameters.Preset)">
+            <summary>Difficulty Presets</summary>
+        </member>
+        <member name="M:FieldTrainingLab.FTL_Options.Enabled(System.Reflection.MemberInfo,GameParameters)">
+            <summary>Enabled?</summary>
+            <param name="member"></param>
+            <param name="parameters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FieldTrainingLab.FTL_Options.Interactible(System.Reflection.MemberInfo,GameParameters)">
+            <summary>Interactible?</summary>
+            <param name="member"></param>
+            <param name="parameters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FieldTrainingLab.FTL_Options.ValidValues(System.Reflection.MemberInfo)">
+            <summary>ValidValues</summary>
+            <param name="member"></param>
+            <returns></returns>
+        </member>
+        <member name="T:FieldTrainingLab.Version">
+            <summary>Version - retrieved at compile from FieldTrainingLab.version</summary>
+        </member>
+        <member name="F:FieldTrainingLab.Version.major">
+            <summary>Major revision</summary>
+        </member>
+        <member name="F:FieldTrainingLab.Version.minor">
+            <summary>Minor revision</summary>
+        </member>
+        <member name="F:FieldTrainingLab.Version.patch">
+            <summary>Patch revision</summary>
+        </member>
+        <member name="F:FieldTrainingLab.Version.build">
+            <summary>Build revision</summary>
+        </member>
+        <member name="F:FieldTrainingLab.Version.Number">
+            <summary>Version String const</summary>
+        </member>
+        <member name="F:FieldTrainingLab.Version.Text">
+            <summary>Text Version String const</summary>
+        </member>
+        <member name="F:FieldTrainingLab.Version.SText">
+            <summary>Plain Text Version String const</summary>
+        </member>
+    </members>
+</doc>

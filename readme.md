@@ -13,7 +13,7 @@ updated: 24 Jun 2022 -->
 
 # Field Training Lab (FTL)
 
-This mod provides a training system (school) for your kerbalnauts by adding a *Field Training Lab* into all science laboratories.
+This mod provides training for your kerbalnauts by adding a *Field Training Lab* into all science laboratories.
 
 *Field Training Lab* provides a training method that consumes science points to earn a kerbal experience (stars).
 

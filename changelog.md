@@ -2,13 +2,62 @@
   
 | modName    | Field Training Lab (FTL)                                          |
 | ---------- | ----------------------------------------------------------------- |
-| license    | GPLv3                                                             |
+| license    | GPL-3.0                                                           |
 | author     | Efour and zer0Kerbal                                              |
 | forum      | (https://forum.kerbalspaceprogram.com/index.php?/topic/188841-*/) |
 | github     | (https://github.com/zer0Kerbal/zer0Kerbal/FieldTrainingLab)       |
 | curseforge | (https://www.curseforge.com/kerbal/ksp-mods/FieldTrainingLab)     |
 | spacedock  | (https://spacedock.info/mod/971)                                  |
 | ckan       | FieldTrainingLab                                                  |
+
+## Version 1.2.2.0-release `<Thank you Efour>` edition
+
+* Released
+  * 11 Jan 2023
+  * Release for Kerbal Space Program 1.12.4
+  * by [zer0Kerbal](https://github.com/zer0Kerbal)
+
+### Summary 1.2.3.0
+
+* Recompiled for 1.12.4 with .NET 4.7.2 using C# 7.0
+
+### Changes 1.2.3.0
+
+#### Code 1.2.3.0
+
+* Recompile for
+  * KSP 1.12.2
+  * .Net 4.7.2
+  * C# 7.0
+  * <FieldTrainingLab.dll> v1.2.1.14 --> 1.2.2.15
+
+#### Localization 1.2.3.0
+
+* Code is localized.
+  * <en-us.cfg> 1.0.2.0
+  * <zh-cn.cfg> v1.0.1.0
+  * add tags
+
+#### Compatability 1.2.3.0
+
+* Add
+  * <StationPartsExpansionRedux.cfg> v1.0.0.0
+  * <TokamakIndustries.cfg> v1.0.0.0
+  * <Bluedog.cfg> v1.0.0.0
+* Update
+  * <Kerbalism.cfg> v1.3.0.0
+* courtesy of [Gordon Dry](https://forum.kerbalspaceprogram.com/index.php?/profile/163177*/)
+
+#### Config 1.2.3.0
+
+* lint and update patches
+* add tags to parts
+
+#### Status 1.2.3.0
+
+* Issues
+
+---
 
 ## Version 1.2.1.0-release - `<Clean Blackboards>` edition
 

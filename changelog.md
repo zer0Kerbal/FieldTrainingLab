@@ -29,14 +29,17 @@
   * KSP 1.12.2
   * .Net 4.7.2
   * C# 7.0
-  * <FieldTrainingLab.dll> v1.2.1.14 --> 1.2.2.15
+  * <FieldTrainingLab.dll> v1.2.1.14 --> 1.2.2.22
 
 #### Localization 1.2.2.0
 
 * Code is localized.
   * <en-us.cfg> 1.0.2.0
-  * <zh-cn.cfg> v1.0.1.0
+  * <zh-cn.cfg> v1.0.1.0 (needs a serious update - many strings added)
   * add tags
+* closes #14 - English <us-en.cfg>
+* closes #31 - Code Localization
+* updates #13 - Localization - Master
 
 #### Compatability 1.2.2.0
 
@@ -50,12 +53,15 @@
 
 #### Config 1.2.2.0
 
+* move primary patch into Config
 * lint and update patches
 * add tags to parts
 
 #### Status 1.2.2.0
 
 * Issues
+  * closes #39 - Field Training Lab (FTL) 1.2.2.0-release `<Thank you Efour>` edition
+  * closes #40 - 1.2.2.0 Additional Tasks
 
 ---
 
@@ -254,7 +260,7 @@
 * for Kerbal Space Program 1.6.1
 * Released on 2018-12-21
 
-* EFour's last release
+* Efour's last release
 * Recompiled 1.6.0
 
 ---

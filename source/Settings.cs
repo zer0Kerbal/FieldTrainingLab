@@ -17,60 +17,56 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-/*using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Reflection;
+using System;
 using UnityEngine;
+using System.Collections.Generic;
+using System.Collections;
+using System.Reflection;
 using KSP.Localization;
 
-// This will add a tab to the Stock Settings in the Difficulty settings called "On Demand Fuel Cells"
-// To use, reference the setting using the following:
-//
-//  HighLogic.CurrentGame.Parameters.CustomParams<ODFC_Options>().needsECtoStart
-//
-// As it is set up, the option is disabled, so in order to enable it, the player would have
-// to deliberately go in and change it
-//
 namespace FieldTrainingLab
 {
     // http://forum.kerbalspaceprogram.com/index.php?/topic/147576-modders-notes-for-ksp-12/#comment-2754813
     // search for "Mod integration into Stock Settings
 
-    public class ODFC_Options : GameParameters.CustomParameterNode
-    {        public override string Title { get { return "[WIP] Field Training Lab Settings"; } }
+    /// <summary>Game Settings FTL Options</summary>
+    public class FTL_Options : GameParameters.CustomParameterNode
+    {
+        /// <summary>Settings Title</summary>
+        public override string Title { get { return "#FTL-1000000"; } }		// #FTL-1000000 = [WIP] Field Training Lab Settings
+        /// <summary>Settings  Game Mode</summary>
         public override GameParameters.GameMode GameMode { get { return GameParameters.GameMode.ANY; } }
-        public override string Section { get { return "[WIP] Field Training"; } }
-        public override string DisplaySection { get { return "[WIP] Field Training"; } }
+        /// <summary>Settings Section</summary>
+        public override string Section { get { return "#FTL-1000001"; } }		// #FTL-1000001 = [WIP] Field Training
+        /// <summary>Settings Display Section</summary>
+        public override string DisplaySection { get { return "#FTL-1000002"; } }		// #FTL-1000002 = [WIP] Field Training
+        /// <summary>Settings Section Order</summary>
         public override int SectionOrder { get { return 1; } }
 
-
-        [GameParameters.CustomParameterUI("Enable Field Training Lab?",
-            toolTip = "Field Training Labs are enabled if set to yes.",
-            newGameOnly = false,
-            unlockedDuringMission = true)]
+        /// <summary>Settings module master enable/disable</summary>
+        [GameParameters.CustomParameterUI("#FTL-settings-enable",		// #FTL-settings-enable = Enable Field Training Lab?
+            toolTip = "#FTL-settings-enable-tt",		// #FTL-settings-enable-tt = Field Training Labs are enabled if set to yes.
+            newGameOnly = false, unlockedDuringMission = true)]
         public bool enableFTL = true;
 
-        [GameParameters.CustomStringParameterUI("Payment Label",
-            toolTip = "Science/Reputation/Funds",
+        /// <summary>Settings Payment</summary>
+        [GameParameters.CustomStringParameterUI("#FTL-settings-paymentLabel",		// #FTL-settings-paymentLabel = Payment Label
+            toolTip = "#FTL-settings-paymentLabel-tt",		// #FTL-settings-paymentLabel-tt = Science/Reputation/Funds
             autoPersistance = true,
             lines = 2,
-            title = "How would you like to pay for your kerbal training?",
+            title = "#FTL-settings-paymentType",		// #FTL-settings-paymentType = How would you like to pay for your kerbal training?
             unlockedDuringMission = true)]
         public string UIstring = "";
 
-        /// <summary>require science points
-        /// to gain experience</summary>        
-        [GameParameters.CustomParameterUI("Require Science Points to advance",
-            toolTip = "If enabled, requires expending Science points to gain experience.",
-            newGameOnly = false,
-            unlockedDuringMission = true)]
+        ///<summary>require science points to gain experience</summary>        
+        [GameParameters.CustomParameterUI("#FTL-settings-paymentType-tt",		// #FTL-settings-paymentType-tt = Require Science Points to advance
+            toolTip = "#FTL-settings-paymentScience",		// #FTL-settings-paymentScience = If enabled, requires expending Science points to gain experience.
+            newGameOnly = false, unlockedDuringMission = true)]
         public bool requireSciencePoints = true;
 
-        /// <summary>number of science points per
-        /// experience point</summary> 
-       [GameParameters.CustomFloatParameterUI("Science : Experience",
-        toolTip = "Ratio of Science Points per Experience Point.",
+        ///<summary>number of science points per experience point</summary> 
+       [GameParameters.CustomFloatParameterUI("#FTL-settings-paymentScience-tt",		// #FTL-settings-paymentScience-tt = Science : Experience
+        toolTip = "#FTL-settings-paymentScienceRatio",		// #FTL-settings-paymentScienceRatio = Ratio of Science Points per Experience Point.
             newGameOnly = false,
             unlockedDuringMission = true,
             minValue = 0.0f,
@@ -78,36 +74,30 @@ namespace FieldTrainingLab
             stepCount = 1)]
        public double costScience = 20.0f;
 
-        /// <summary>require Reputation
-        /// to gain experience</summary>
-        [GameParameters.CustomParameterUI("Require Reputation to advance",
-            toolTip = "If enabled, requires expending Reputation to gain experience.",
-            newGameOnly = false,
-            unlockedDuringMission = true)]
+        ///<summary>require Reputation to gain experience</summary>
+        [GameParameters.CustomParameterUI("#FTL-settings-paymentScienceRatio-tt",		// #FTL-settings-paymentScienceRatio-tt = Require Reputation to advance
+            toolTip = "#FTL-settings-paymentRep",		// #FTL-settings-paymentRep = If enabled, requires expending Reputation to gain experience.
+            newGameOnly = false, unlockedDuringMission = true)]
         public bool requireReputationPoints = false;
 
-        /// <summary>number of Reputation per
-        /// experience point</summary>
-        [GameParameters.CustomFloatParameterUI("Reputation : Experience",
-         toolTip = "Ratio of Reputation per Experience Point.",
+        ///<summary>number of Reputation per experience point</summary>
+        [GameParameters.CustomFloatParameterUI("#FTL-settings-paymentRep-tt",		// #FTL-settings-paymentRep-tt = Reputation : Experience
+         toolTip = "#FTL-settings-paymentRepRatio",		// #FTL-settings-paymentRepRatio = Ratio of Reputation per Experience Point.
              newGameOnly = false,
              unlockedDuringMission = true,
              minValue = 0.0f,
              maxValue = 50.0f)]
         public double costReputation = 0.1f;
 
-        /// <summary>require Funds
-        /// to gain experience</summary>       
-        [GameParameters.CustomParameterUI("Require Funds to advance",
-        toolTip = "If enabled, requires expending Funds to gain experience.",
-            newGameOnly = false,
-            unlockedDuringMission = true)]
+        ///<summary>require Funds to gain experience</summary>       
+        [GameParameters.CustomParameterUI("#FTL-settings-paymentRepRatio-tt",		// #FTL-settings-paymentRepRatio-tt = Require Funds to advance
+        toolTip = "#FTL-settings-paymentFunds",		// #FTL-settings-paymentFunds = If enabled, requires expending Funds to gain experience.
+            newGameOnly = false, unlockedDuringMission = true)]
         public bool requireFunds = false;
 
-        /// <summary>amount of Funds per
-        /// experience point</summary>  
-        [GameParameters.CustomFloatParameterUI("Funds : Experience",
-         toolTip = "Ratio of Funds per Experience Point.",
+        ///<summary>amount of Funds per experience point</summary>  
+        [GameParameters.CustomFloatParameterUI("#FTL-settings-paymentFunds-tt",		// #FTL-settings-paymentFunds-tt = Funds : Experience
+         toolTip = "#FTL-settings-paymentFundsRatio",		// #FTL-settings-paymentFundsRatio = Ratio of Funds per Experience Point.
              newGameOnly = false,
              unlockedDuringMission = true,
              minValue = 0.0f,
@@ -115,24 +105,26 @@ namespace FieldTrainingLab
              stepCount = 1)]
         public double costFunds = 1000f;
 
-        [GameParameters.CustomParameterUI("KSPMail",
-            toolTip = "Recieve a colorful Joyntmail announcing graduation to a new rank?.",
-            newGameOnly = false,
-            unlockedDuringMission = true)]
+        /// <summary>Settings - KSP Mail</summary>
+        [GameParameters.CustomParameterUI("#FTL-settings-paymentFundsRatio-tt",		// #FTL-settings-paymentFundsRatio-tt = KSPMail
+            toolTip = "#FTL-settings-mail-tt",		// #FTL-settings-mail-tt = Recieve a colorful Joyntmail announcing graduation to a new rank?.
+            newGameOnly = false, unlockedDuringMission = true)]
         public bool KSPMail = true;
 
-        [GameParameters.CustomParameterUI("PAW Color",
-            toolTip = "allow color coding in Field Training Lab PAW (part action window) / RMB (right menu button).",
-            newGameOnly = false,
-            unlockedDuringMission = true)]
-        public bool coloredPAWFTL = true;
+        /// <summary>Settings allow colored PAW</summary>
+        [GameParameters.CustomParameterUI("#FTL-settings-pawColor",		// #FTL-settings-pawColor = PAW Color
+            toolTip = "#FTL-settings-pawColor-tt",		// #FTL-settings-pawColor-tt = allow color coding in Field Training Lab PAW (part action window) / RMB (right menu button).
+            newGameOnly = false, unlockedDuringMission = true)]
+        public bool coloredPAW = true;
 
         // If you want to have some of the game settings default to enabled,  change 
         // the "if false" to "if true" and set the values as you like
 
 
 #if true
+        /// <summary>Had Presets?</summary>
         public override bool HasPresets { get { return true; } }
+        /// <summary>Difficulty Presets</summary>
         public override void SetDifficultyPreset(GameParameters.Preset preset)
         {
             Debug.Log("Setting difficulty preset");
@@ -194,5 +186,3 @@ namespace FieldTrainingLab
         public override IList ValidValues(MemberInfo member) { return null; }
     }
 }
-
-   */

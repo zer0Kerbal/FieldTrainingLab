@@ -3,7 +3,7 @@
     "identifier":   "FieldTrainingLaboratory",
     "$kref":        "#/ckan/spacedock/971",
     "$vref":        "#/ckan/ksp-avc",
-    "license":      "MIT",
+    "license":      "GPL-3.0",
     "install": [ {
         "find":       "FieldTrainingLab",
         "install_to": "GameData"

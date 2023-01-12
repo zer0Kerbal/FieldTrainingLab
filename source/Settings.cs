@@ -1,6 +1,6 @@
 ﻿/* Field Training Lab (FTL)
  * This addon adds a training center in the science laboratory. Paying science points gets kerbals experience. For Kerbal Space Program.
- * Copyright (C) 2016 EFour
+ * Copyright (C) 2016 Efour
  * Copyright (C) 2019, 2022, 2023 zer0Kerbal (zer0Kerbal at hotmail dot com)
  * 
  * This program is free software: you can redistribute it and/or modify
@@ -33,15 +33,19 @@ namespace FieldTrainingLab
     public class FTL_Options : GameParameters.CustomParameterNode
     {
         /// <summary>Settings Title</summary>
-        public override string Title { get { return "#FTL-1000000"; } }		// #FTL-1000000 = [WIP] Field Training Lab Settings
-        /// <summary>Settings  Game Mode</summary>
-        public override GameParameters.GameMode GameMode { get { return GameParameters.GameMode.ANY; } }
+        public override string Title { get { return "#FTL-settings-title-label"; } }		// #FTL-settings-title-label = [WIP] Field Training Lab Settings
+
         /// <summary>Settings Section</summary>
-        public override string Section { get { return "#FTL-1000001"; } }		// #FTL-1000001 = [WIP] Field Training
+        public override string Section { get { return "#FTL-settings-section"; } }		// #FTL-settings-section = [WIP] Field Training
+
         /// <summary>Settings Display Section</summary>
-        public override string DisplaySection { get { return "#FTL-1000002"; } }		// #FTL-1000002 = [WIP] Field Training
+        public override string DisplaySection { get { return "#FTL-settings-section-display-label"; } }		// #FTL-settings-section-display-label = [WIP] Field Training
+
         /// <summary>Settings Section Order</summary>
         public override int SectionOrder { get { return 1; } }
+
+        /// <summary>Settings  Game Mode</summary>
+        public override GameParameters.GameMode GameMode { get { return GameParameters.GameMode.ANY; } }
 
         /// <summary>Settings module master enable/disable</summary>
         [GameParameters.CustomParameterUI("#FTL-settings-enable",		// #FTL-settings-enable = Enable Field Training Lab?
@@ -180,9 +184,21 @@ namespace FieldTrainingLab
         public override bool HasPresets { get { return false; } }
         public override void SetDifficultyPreset(GameParameters.Preset preset) { }
 #endif
-
+        /// <summary>Enabled?</summary>
+        /// <param name="member"></param>
+        /// <param name="parameters"></param>
+        /// <returns></returns>
         public override bool Enabled(MemberInfo member, GameParameters parameters) { return true; }
+
+        /// <summary>Interactible?</summary>
+        /// <param name="member"></param>
+        /// <param name="parameters"></param>
+        /// <returns></returns>
         public override bool Interactible(MemberInfo member, GameParameters parameters) { return true; }
+        
+        /// <summary>ValidValues</summary>
+        /// <param name="member"></param>
+        /// <returns></returns>
         public override IList ValidValues(MemberInfo member) { return null; }
     }
 }
